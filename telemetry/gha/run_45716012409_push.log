@@ -1,0 +1,1140 @@
+nix-gate	Set up job	﻿2026-11-25T22:46:13.0294906Z Current runner version: '2.338.2'
+nix-gate	Set up job	2026-11-25T22:46:13.0334990Z ##[group]Runner Image Provisioner
+nix-gate	Set up job	2026-11-25T22:46:13.0336395Z Hosted Compute Agent
+nix-gate	Set up job	2026-11-25T22:46:13.0337535Z Version: 20261111.635
+nix-gate	Set up job	2026-11-25T22:46:13.0338642Z Commit: b8a594ea514ff44cadb5342986c68b1eac6e22ed
+nix-gate	Set up job	2026-11-25T22:46:13.0340419Z Build Date: 2026-11-11T01:49:01Z
+nix-gate	Set up job	2026-11-25T22:46:13.0341662Z Worker ID: {61c3b142-ee16-4f59-a94d-10a5d624e8a2}
+nix-gate	Set up job	2026-11-25T22:46:13.0342947Z Region: westus
+nix-gate	Set up job	2026-11-25T22:46:13.0344046Z Cloud: Azure
+nix-gate	Set up job	2026-11-25T22:46:13.0345035Z ##[endgroup]
+nix-gate	Set up job	2026-11-25T22:46:13.0347827Z ##[group]Operating System
+nix-gate	Set up job	2026-11-25T22:46:13.0348967Z Ubuntu
+nix-gate	Set up job	2026-11-25T22:46:13.0350126Z 26.04.1
+nix-gate	Set up job	2026-11-25T22:46:13.0351273Z LTS
+nix-gate	Set up job	2026-11-25T22:46:13.0352188Z ##[endgroup]
+nix-gate	Set up job	2026-11-25T22:46:13.0353162Z ##[group]Runner Image
+nix-gate	Set up job	2026-11-25T22:46:13.0354351Z Image: ubuntu-26.04
+nix-gate	Set up job	2026-11-25T22:46:13.0355505Z Version: 20261116.202.1
+nix-gate	Set up job	2026-11-25T22:46:13.0357630Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261116.202/images/ubuntu/Ubuntu2604-Readme.md
+nix-gate	Set up job	2026-11-25T22:46:13.0361130Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261116.202
+nix-gate	Set up job	2026-11-25T22:46:13.0363053Z ##[endgroup]
+nix-gate	Set up job	2026-11-25T22:46:13.0365033Z ##[group]GITHUB_TOKEN Permissions
+nix-gate	Set up job	2026-11-25T22:46:13.0368194Z Contents: read
+nix-gate	Set up job	2026-11-25T22:46:13.0369294Z Metadata: read
+nix-gate	Set up job	2026-11-25T22:46:13.0370764Z Packages: read
+nix-gate	Set up job	2026-11-25T22:46:13.0371777Z ##[endgroup]
+nix-gate	Set up job	2026-11-25T22:46:13.0390938Z Secret source: Actions
+nix-gate	Set up job	2026-11-25T22:46:13.0392626Z Cache mode: write
+nix-gate	Set up job	2026-11-25T22:46:13.0394320Z Prepare workflow directory
+nix-gate	Set up job	2026-11-25T22:46:13.1065582Z Prepare all required actions
+nix-gate	Set up job	2026-11-25T22:46:13.1140405Z Getting action download info
+nix-gate	Set up job	2026-11-25T22:46:13.5386910Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+nix-gate	Set up job	2026-11-25T22:46:13.6481172Z Download action repository 'DeterminateSystems/nix-installer-action@main' (SHA:2559b44fed7d4fc978e8dd0e379661afb8b73590)
+nix-gate	Set up job	2026-11-25T22:46:14.0083032Z Download action repository 'DeterminateSystems/magic-nix-cache-action@main' (SHA:8941f279e15828abcd2fc8fbb7cd282ab00972a7)
+nix-gate	Set up job	2026-11-25T22:46:14.4903592Z Complete job name: nix-gate
+nix-gate	Run actions/checkout@v4	﻿2026-11-25T22:46:14.5801758Z ##[group]Run actions/checkout@v4
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:14.5802729Z with:
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:14.5803247Z   repository: ajgreengrove/vllm-ci-poc
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:14.5807305Z   token: ***
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:14.5807778Z   ssh-strict: true
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:14.5808266Z   ssh-user: git
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:14.5808740Z   persist-credentials: true
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:14.5809263Z   clean: true
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:14.5809928Z   sparse-checkout-cone-mode: true
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:14.5810505Z   fetch-depth: 1
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:14.5810975Z   fetch-tags: false
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:14.5811469Z   show-progress: true
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:14.5811960Z   lfs: false
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:14.5812452Z   submodules: false
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:14.5812964Z   set-safe-directory: true
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:14.5813519Z   allow-unsafe-pr-checkout: false
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:14.5814500Z ##[endgroup]
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:14.8668930Z Syncing repository: ajgreengrove/vllm-ci-poc
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:14.8675487Z ##[group]Getting Git version info
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:14.8676905Z Working directory is '/home/runner/work/vllm-ci-poc/vllm-ci-poc'
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:14.8679025Z [command]/usr/bin/git version
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:14.8716969Z git version 2.56.1
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:14.8762259Z ##[endgroup]
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:14.8793885Z Temporarily overriding HOME='/home/runner/work/_temp/b9152d08-e55d-4f9a-9b33-2eb2441895ed' before making global git config changes
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:14.8797269Z Adding repository directory to the temporary git global config as a safe directory
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:14.8802027Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/vllm-ci-poc/vllm-ci-poc
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:14.8901186Z Deleting the contents of '/home/runner/work/vllm-ci-poc/vllm-ci-poc'
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:14.8903954Z ##[group]Initializing the repository
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:14.8941216Z [command]/usr/bin/git init /home/runner/work/vllm-ci-poc/vllm-ci-poc
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:14.9050826Z hint: Using 'master' as the name for the initial branch. This default branch name
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:14.9058026Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:14.9061450Z hint: to use in all of your new repositories, which will suppress this warning,
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:14.9064078Z hint: call:
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:14.9065407Z hint:
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:14.9067155Z hint: 	git config --global init.defaultBranch <name>
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:14.9085483Z hint:
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:14.9088793Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:14.9100897Z hint: 'development'. The just-created branch can be renamed via this command:
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:14.9102842Z hint:
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:14.9104155Z hint: 	git branch -m <name>
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:14.9105596Z hint:
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:14.9107304Z hint: Disable this message with "git config set advice.defaultBranchName false"
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:14.9110218Z Initialized empty Git repository in /home/runner/work/vllm-ci-poc/vllm-ci-poc/.git/
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:14.9114663Z [command]/usr/bin/git remote add origin https://github.com/ajgreengrove/vllm-ci-poc
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:14.9183059Z ##[endgroup]
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:14.9185090Z ##[group]Disabling automatic garbage collection
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:14.9198981Z [command]/usr/bin/git config --local gc.auto 0
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:14.9237890Z ##[endgroup]
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:14.9240502Z ##[group]Setting up auth
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:14.9252143Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:14.9305238Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:14.9981831Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:15.0044108Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:15.0353345Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:15.0391789Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:15.0684925Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:15.0731720Z ##[endgroup]
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:15.0734407Z ##[group]Fetching the repository
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:15.0744778Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +0e3dd9d480138d02932632d32251f65516fd0ca6:refs/remotes/origin/main
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:15.5285877Z From https://github.com/ajgreengrove/vllm-ci-poc
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:15.5290775Z  * [new ref]         0e3dd9d480138d02932632d32251f65516fd0ca6 -> origin/main
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:15.5314630Z ##[endgroup]
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:15.5317919Z ##[group]Determining the checkout info
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:15.5322226Z ##[endgroup]
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:15.5324864Z [command]/usr/bin/git sparse-checkout disable
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:15.5331875Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:15.5340365Z ##[group]Checking out the ref
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:15.5343662Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:15.5347683Z Switched to a new branch 'main'
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:15.5350463Z branch 'main' set up to track 'origin/main'.
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:15.5358360Z ##[endgroup]
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:15.5364722Z [command]/usr/bin/git log -1 --format=%H
+nix-gate	Run actions/checkout@v4	2026-11-25T22:46:15.5367934Z 0e3dd9d480138d02932632d32251f65516fd0ca6
+nix-gate	Run DeterminateSystems/nix-installer-action@main	﻿2026-11-25T22:46:15.6048245Z ##[group]Run DeterminateSystems/nix-installer-action@main
+nix-gate	Run DeterminateSystems/nix-installer-action@main	2026-11-25T22:46:15.6049878Z with:
+nix-gate	Run DeterminateSystems/nix-installer-action@main	2026-11-25T22:46:15.6050664Z   determinate: true
+nix-gate	Run DeterminateSystems/nix-installer-action@main	2026-11-25T22:46:15.6051752Z   flakehub: false
+nix-gate	Run DeterminateSystems/nix-installer-action@main	2026-11-25T22:46:15.6052633Z   force-no-systemd: false
+nix-gate	Run DeterminateSystems/nix-installer-action@main	2026-11-25T22:46:15.6062361Z   github-token: ***
+nix-gate	Run DeterminateSystems/nix-installer-action@main	2026-11-25T22:46:15.6063346Z   github-server-url: https://github.com
+nix-gate	Run DeterminateSystems/nix-installer-action@main	2026-11-25T22:46:15.6064515Z   job-status: success
+nix-gate	Run DeterminateSystems/nix-installer-action@main	2026-11-25T22:46:15.6065389Z   kvm: true
+nix-gate	Run DeterminateSystems/nix-installer-action@main	2026-11-25T22:46:15.6066195Z   modify-profile: true
+nix-gate	Run DeterminateSystems/nix-installer-action@main	2026-11-25T22:46:15.6067109Z   reinstall: false
+nix-gate	Run DeterminateSystems/nix-installer-action@main	2026-11-25T22:46:15.6067964Z   start-daemon: true
+nix-gate	Run DeterminateSystems/nix-installer-action@main	2026-11-25T22:46:15.6068869Z   diagnostic-endpoint: -
+nix-gate	Run DeterminateSystems/nix-installer-action@main	2026-11-25T22:46:15.6070667Z   trust-runner-user: true
+nix-gate	Run DeterminateSystems/nix-installer-action@main	2026-11-25T22:46:15.6071711Z   summarize: true
+nix-gate	Run DeterminateSystems/nix-installer-action@main	2026-11-25T22:46:15.6072634Z   _internal-strict-mode: false
+nix-gate	Run DeterminateSystems/nix-installer-action@main	2026-11-25T22:46:15.6073658Z ##[endgroup]
+nix-gate	Run DeterminateSystems/nix-installer-action@main	2026-11-25T22:46:16.1994267Z [command]/usr/bin/sudo mkdir -p /var/lib/determinate
+nix-gate	Run DeterminateSystems/nix-installer-action@main	2026-11-25T22:46:16.2601547Z ##[group]Detecting systemd...
+nix-gate	Run DeterminateSystems/nix-installer-action@main	2026-11-25T22:46:16.2618154Z ##[endgroup]
+nix-gate	Run DeterminateSystems/nix-installer-action@main	2026-11-25T22:46:16.2650046Z ##[group]Configuring KVM
+nix-gate	Run DeterminateSystems/nix-installer-action@main	2026-11-25T22:46:16.3868380Z ##[endgroup]
+nix-gate	Run DeterminateSystems/nix-installer-action@main	2026-11-25T22:46:16.3882997Z ^[[32m Accelerated KVM is enabled ^[[33m⚡️
+nix-gate	Run DeterminateSystems/nix-installer-action@main	2026-11-25T22:46:16.3887908Z ##[group]Installing Nix
+nix-gate	Run DeterminateSystems/nix-installer-action@main	2026-11-25T22:46:16.3898941Z ##[group]Downloading nix-installer for x86_64-linux
+nix-gate	Run DeterminateSystems/nix-installer-action@main	2026-11-25T22:46:16.3902848Z Fetching from https://cf.install.determinate.systems/nix-installer/stable/x86_64-linux
+nix-gate	Run DeterminateSystems/nix-installer-action@main	2026-11-25T22:46:17.5553955Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/_temp/nix-installer-2fa35491-61b5-4dbf-a50d-3c8173dd9a88 --files-from manifest.txt --use-compress-program zstdmt
+nix-gate	Run DeterminateSystems/nix-installer-action@main	2026-11-25T22:46:19.1163605Z Sent 17891328 of 49484727 (36.2%), 17.0 MBs/sec
+nix-gate	Run DeterminateSystems/nix-installer-action@main	2026-11-25T22:46:20.1165868Z Sent 49484727 of 49484727 (100.0%), 23.6 MBs/sec
+nix-gate	Run DeterminateSystems/nix-installer-action@main	2026-11-25T22:46:20.4711377Z ##[endgroup]
+nix-gate	Run DeterminateSystems/nix-installer-action@main	2026-11-25T22:46:20.4739177Z Installing Determinate Nix using the --determinate flag
+nix-gate	Run DeterminateSystems/nix-installer-action@main	2026-11-25T22:46:20.4761519Z [command]/home/runner/work/_temp/nix-installer-80bd9b38-1aac-4aca-9b8b-280e78cffa45 install linux --determinate
+nix-gate	Run DeterminateSystems/nix-installer-action@main	2026-11-25T22:46:20.4830353Z  INFO nix-installer v3.24.3
+nix-gate	Run DeterminateSystems/nix-installer-action@main	2026-11-25T22:46:20.6040904Z ^[[2m^[[33m`nix-installer` needs to run as `root`, attempting to escalate now via `sudo`...^[[39m^[[0m
+nix-gate	Run DeterminateSystems/nix-installer-action@main	2026-11-25T22:46:20.6165919Z  INFO nix-installer v3.24.3
+nix-gate	Run DeterminateSystems/nix-installer-action@main	2026-11-25T22:46:20.8143585Z  INFO Step: Create directory `/nix`
+nix-gate	Run DeterminateSystems/nix-installer-action@main	2026-11-25T22:46:20.8172471Z  INFO Step: Install Determinate Nixd
+nix-gate	Run DeterminateSystems/nix-installer-action@main	2026-11-25T22:46:20.8545652Z  INFO Step: Provision Nix
+nix-gate	Run DeterminateSystems/nix-installer-action@main	2026-11-25T22:46:23.7351023Z  INFO Step: Create build users (UID 30001-30032) and group (GID 30000)
+nix-gate	Run DeterminateSystems/nix-installer-action@main	2026-11-25T22:46:24.5878511Z  INFO Step: Configure Nix
+nix-gate	Run DeterminateSystems/nix-installer-action@main	2026-11-25T22:46:25.4452133Z  INFO Step: Create directory `/etc/tmpfiles.d`
+nix-gate	Run DeterminateSystems/nix-installer-action@main	2026-11-25T22:46:25.4535828Z  INFO Step: Configure the Determinate Nix daemon
+nix-gate	Run DeterminateSystems/nix-installer-action@main	2026-11-25T22:46:27.6427723Z  INFO Step: Cleanup
+nix-gate	Run DeterminateSystems/nix-installer-action@main	2026-11-25T22:46:27.6522221Z  INFO Running self test for shell sh
+nix-gate	Run DeterminateSystems/nix-installer-action@main	2026-11-25T22:46:28.1313646Z  INFO Running self test for shell bash
+nix-gate	Run DeterminateSystems/nix-installer-action@main	2026-11-25T22:46:28.4926410Z ^[[1m^[[32mNix was installed successfully!^[[39m^[[0m
+nix-gate	Run DeterminateSystems/nix-installer-action@main	2026-11-25T22:46:28.4940861Z To get started using Nix, open a new shell or run `^[[1m. /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh^[[0m`
+nix-gate	Run DeterminateSystems/nix-installer-action@main	2026-11-25T22:46:28.4949758Z 
+nix-gate	Run DeterminateSystems/nix-installer-action@main	2026-11-25T22:46:28.5577001Z ##[endgroup]
+nix-gate	Run DeterminateSystems/nix-installer-action@main	2026-11-25T22:46:28.5592487Z FlakeHub is disabled because the workflow is misconfigured. Please make sure that `id-token: write` and `contents: read` are set for this step's (or job's) permissions so that GitHub Actions provides OIDC token endpoints.
+nix-gate	Run DeterminateSystems/nix-installer-action@main	2026-11-25T22:46:28.5595167Z For more information, see https://docs.determinate.systems/guides/github-actions/#nix-installer-action
+nix-gate	Flake check	﻿2026-11-25T22:46:43.5237722Z ##[group]Run nix flake check --no-build
+nix-gate	Flake check	2026-11-25T22:46:43.5238192Z ^[[36;1mnix flake check --no-build^[[0m
+nix-gate	Flake check	2026-11-25T22:46:43.5277933Z shell: /usr/bin/bash -e {0}
+nix-gate	Flake check	2026-11-25T22:46:43.5278248Z env:
+nix-gate	Flake check	2026-11-25T22:46:43.5278550Z   DETSYS_INVOCATION_ID: 85dc882e-6830-418d-9221-21de426a4d74
+nix-gate	Flake check	2026-11-25T22:46:43.5278948Z   DETERMINATE_NIX_KVM: 1
+nix-gate	Flake check	2026-11-25T22:46:43.5279626Z   MAGIC_NIX_CACHE_DAEMONDIR: /home/runner/work/_temp/magic-nix-cache-3451cd49-45d4-474b-8ff9-4106447afb98
+nix-gate	Flake check	2026-11-25T22:46:43.5280220Z   MAGIC_NIX_CACHE_ADDRESS: 127.0.0.1:37515
+nix-gate	Flake check	2026-11-25T22:46:43.5280536Z ##[endgroup]
+nix-gate	Flake check	2026-11-25T22:46:43.6050817Z evaluating 'checks'...
+nix-gate	Flake check	2026-11-25T22:46:43.6051661Z evaluating 'devShells'...
+nix-gate	Flake check	2026-11-25T22:46:43.6052352Z evaluating 'checks'...
+nix-gate	Flake check	2026-11-25T22:46:43.6052917Z evaluating 'packages'...
+nix-gate	Flake check	2026-11-25T22:46:43.6053492Z evaluating 'devShells'...
+nix-gate	Flake check	2026-11-25T22:46:43.6054059Z evaluating 'packages'...
+nix-gate	Flake check	2026-11-25T22:46:43.6054621Z evaluating 'checks.x86_64-linux'...
+nix-gate	Flake check	2026-11-25T22:46:43.6055235Z evaluating 'packages.x86_64-linux'...
+nix-gate	Flake check	2026-11-25T22:46:43.6055995Z evaluating 'checks.x86_64-linux.smoke'...
+nix-gate	Flake check	2026-11-25T22:46:43.6056621Z evaluating 'devShells.x86_64-linux'...
+nix-gate	Flake check	2026-11-25T22:46:43.6057267Z evaluating 'devShells.x86_64-linux.default'...
+nix-gate	Flake check	2026-11-25T22:46:43.6057964Z evaluating 'packages.x86_64-linux.dockerImage'...
+nix-gate	Flake check	2026-11-25T22:46:43.8817297Z copying path '/nix/store/1hb1glkkpl6vjjpfrwzmvjyvhcyqfxfk-source' from 'http://127.0.0.1:37515'...
+nix-gate	Flake check	2026-11-25T22:46:55.3020856Z ✅ devShells.x86_64-linux.default (build skipped)
+nix-gate	Flake check	2026-11-25T22:46:55.3040332Z ✅ packages.x86_64-linux.dockerImage (build skipped)
+nix-gate	Flake check	2026-11-25T22:46:56.2308004Z ✅ checks.x86_64-linux.smoke
+nix-gate	Native import and linker gate	﻿2026-11-25T22:46:56.2578986Z ##[group]Run nix develop --command python3 -c "import torchcodec.decoders"
+nix-gate	Native import and linker gate	2026-11-25T22:46:56.2580337Z ^[[36;1mnix develop --command python3 -c "import torchcodec.decoders"^[[0m
+nix-gate	Native import and linker gate	2026-11-25T22:46:56.2623474Z shell: /usr/bin/bash -e {0}
+nix-gate	Native import and linker gate	2026-11-25T22:46:56.2623754Z env:
+nix-gate	Native import and linker gate	2026-11-25T22:46:56.2624036Z   DETSYS_INVOCATION_ID: 85dc882e-6830-418d-9221-21de426a4d74
+nix-gate	Native import and linker gate	2026-11-25T22:46:56.2624397Z   DETERMINATE_NIX_KVM: 1
+nix-gate	Native import and linker gate	2026-11-25T22:46:56.2624869Z   MAGIC_NIX_CACHE_DAEMONDIR: /home/runner/work/_temp/magic-nix-cache-3451cd49-45d4-474b-8ff9-4106447afb98
+nix-gate	Native import and linker gate	2026-11-25T22:46:56.2625386Z   MAGIC_NIX_CACHE_ADDRESS: 127.0.0.1:37515
+nix-gate	Native import and linker gate	2026-11-25T22:46:56.2625671Z ##[endgroup]
+nix-gate	Native import and linker gate	2026-11-25T22:47:02.2266940Z copying path '/nix/store/g54b6ghpnn98hfdz4yqw87w10c3hx8bv-xgcc-15.2.0-libgcc' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:02.3284000Z copying path '/nix/store/bf6wgamqnl3c91iamlb1branrfcwwy7x-libunistring-1.4.2' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:02.3426990Z copying path '/nix/store/zmvllxxx62iys7vpyg020rni3v29bcxi-gnu-config-2024-01-01' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:02.3501160Z copying path '/nix/store/pai2wycnlspqn7x9a7kc45rp3kbf0mr0-builder.pl' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:02.4055098Z copying path '/nix/store/63hql95qzpq411pyhgvjki61xnmqlhnl-bin' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:02.4319893Z copying path '/nix/store/6qa00czc79b3nb6ld0mdyacfp2p1k3jx-libidn2-2.3.8' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:02.4917571Z copying path '/nix/store/v2hsfkf03b3l79rhcxw4nq7w79kr3qkw-tzdata-2026b' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:02.5006361Z copying path '/nix/store/xyikkpwkyxx6syba3kfrr0h67ig5hwmn-gcc-15.2.0-libgcc' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:02.5141028Z copying path '/nix/store/5y1v5mjsrlz3i2pwg43hdc6ghjjylbpq-die-hook' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:02.5235311Z copying path '/nix/store/xknj6c33cc197s60ry0i69vdkmaizrs1-update-autotools-gnu-config-scripts-hook' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:02.5434623Z copying path '/nix/store/6snfrwakqanqp7c21nnzmz183fkhnzv1-nss-cacert-3.123' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:02.5482192Z copying path '/nix/store/8wrmi2fp3wvn2w6ikdfgzspyr8nwn934-mailcap-2.1.54' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:02.6096443Z copying path '/nix/store/57iz36553175g3178pvxjij8z5rcsd4n-glibc-2.42-61' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:02.6129062Z copying path '/nix/store/xn70pn0qd5jhdvp5rikgn1yl9bbmyxiq-zlib-1.3.2-static' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:02.7632655Z copying path '/nix/store/s52vdyj97g3adv6qb431v8m2kccs0bzz-linux-headers-6.18.7' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:02.8567402Z copying path '/nix/store/pxxjhd9y7z2anp67bp6j4002r9bnwizf-ffmpeg-8.1-data' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:02.9264865Z copying path '/nix/store/m3rljmxkdbvg8sm43mnchsnk1j7l57yw-alsa-topology-conf-1.2.5.1' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:02.9276488Z copying path '/nix/store/s0v7cizdm8c5d3v1z9467lw33q1ksq44-dejavu-fonts-minimal-2.37' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:02.9601438Z copying path '/nix/store/ciq3zg1lwjac9lsim9grz542lyry65vc-gfortran-15.2.0-libgcc' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.0262432Z copying path '/nix/store/bazbfy39njrwsyb79a5mblx2cmal3907-hwdata-0.406' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.0281648Z copying path '/nix/store/yyj8jpg9g2382khm5vgb0i20bp8j4phb-dns-root-data-2025-04-14' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.0442338Z copying path '/nix/store/z2z1vyjz3rpa8rgpzssfsn0d8dnl663y-fontconfig-2.17.1' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.1714521Z copying path '/nix/store/v2dzxxlyf0z8njnr3nar1wmdiw6hssb6-attr-2.5.2' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.1722875Z copying path '/nix/store/gik3rh1vz2jlgnifb9dh6vc6sxwwz9jj-bash-5.3p9' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.1731216Z copying path '/nix/store/k1shjmzyzw8bf7vp8gyrqn4dn70xpdxx-brotli-1.2.0-lib' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.1742556Z copying path '/nix/store/dadk381crh40alsk19jhn4m828szsj6b-c-ares-1.34.6' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.1745848Z copying path '/nix/store/3lnvi6r17y9kki4r9klzvavranaz3131-bzip2-1.0.8' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.1752726Z copying path '/nix/store/5b5819wf841id5xnz5qi6p6hsil05y7s-dav1d-1.5.3' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.1755950Z copying path '/nix/store/ciwvx39m0iiyr98d1rkc4rl3l9y0wfnd-cjson-1.7.19' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.1763896Z copying path '/nix/store/3zsxawygch41cizjvhpacmgaq7y3vhjg-ed-1.22.5' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.1772386Z copying path '/nix/store/srn27ymz85mv7nbwkv1lyhi7g91cvyh7-fribidi-1.0.16' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.1783815Z copying path '/nix/store/chqq8mpmpyfi9kgsngya71akv5xicn03-gcc-15.2.0-lib' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.1789211Z copying path '/nix/store/hi0fdcqdkmzwxhzlx7y6z2yf6d5lw8ix-expand-response-params' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.1800804Z copying path '/nix/store/wp1cshqv98i8abs8rcx91s54igqgll0f-gawk-5.4.0' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.1808594Z copying path '/nix/store/sip20973p37114yis96sba5f4pzl7s3i-gfortran-15.2.0-lib' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.1810510Z copying path '/nix/store/zswf4c2na0d8ykb59rrp14748jb0w2wc-gdbm-1.26-lib' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.1815864Z copying path '/nix/store/d8927sznk6qnqln6hl9p4d42h8pq49vg-expat-2.8.0' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.2133811Z copying path '/nix/store/ifng2dpzr1xi45w2px709xzq6fhfqlj3-giflib-5.2.2' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.2680540Z copying path '/nix/store/61a1nwx3w6rqyaisj5rn1sal1981apm7-zlib-1.3.2' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.2752762Z copying path '/nix/store/9qf6m6csaabfx2adfdk5771w8fjsqccs-pcre2-10.46' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.2770389Z copying path '/nix/store/kgxafhycw2kybbqih759ykc2043qyi5j-gnused-4.9' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.2934623Z copying path '/nix/store/vlq7nnw39j7rwk0pp68w1fcwzpxahm9h-gnumake-4.4.1' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.3005026Z copying path '/nix/store/yxla342pd0453pz2k0yybnyy1hig8dv4-acl-2.3.2' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.3119187Z copying path '/nix/store/3y3kzc5njlj7nwj1s78am0yzjnpicv9x-bzip2-1.0.8-bin' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.3127050Z copying path '/nix/store/wgvplwp0faqhqr92w0ma8bxaxk202ama-patch-2.8' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.3134884Z copying path '/nix/store/waz72vmxc8zk90qqvgg9ikhzdk1kzjy4-xz-5.8.3' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.3401215Z copying path '/nix/store/1scb6xccxlqy8rj9hfgf7ppqv99pfwq9-util-linux-minimal-2.42-lib' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.3465109Z copying path '/nix/store/2zs4bbi72plfm8j6zxf1js4f3yc4yzwy-libffi-3.5.2' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.3482316Z copying path '/nix/store/x62lc9cwndz8yh47l0brgf06vjc4wnxj-speex-1.2.1' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.3613367Z copying path '/nix/store/v9sym7lkcp6nj2llsqhajvp2zmimv5v1-mpdecimal-4.0.1' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.3675059Z copying path '/nix/store/ndpbjk6jhw0da5h272dqqnyxa35a9gmx-gzip-1.14' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.3830832Z copying path '/nix/store/wl2nw5l4x4dg6kclbgpq7v9212i1s6cy-ncurses-6.6' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.4160452Z copying path '/nix/store/kyz3mm5snbb8998kbkm28jps1phk9509-file-5.47' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.4277670Z copying path '/nix/store/y18pnbvfarnilsmgayswvi1khaw9wbsc-openssl-3.6.2' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.4302388Z copying path '/nix/store/k5akwnrn9x2afaj2va7g4a2zpdim8l43-gnutar-1.35' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.4309268Z copying path '/nix/store/yg1gv8db04ldrnmdhykq8zjqqg6pg5kd-sqlite-3.51.2' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.4383189Z copying path '/nix/store/6h5x436gsbc92ahp2bmxfl8h7h318p17-binutils-2.46-lib' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.4602589Z copying path '/nix/store/gn94gpcp5q08x4v6g8mvw8v4r65rcjzk-gnugrep-3.12' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.4605400Z copying path '/nix/store/g23gmzxz2asin32kxdnz7cvq5i4fx3an-libxcrypt-4.5.2' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.4649403Z copying path '/nix/store/6lfzc2r9ifczrfanhzw8knf3zg4f2mix-libselinux-3.10' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.4729446Z copying path '/nix/store/j5pf7byjv0ahvxcnkd5jsw481i82d7ng-libjpeg-turbo-3.1.4' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.4835620Z copying path '/nix/store/md7n8n5l55lpw8izhv4792cjn2isdi3y-lcms2-2.18' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.4854641Z copying path '/nix/store/bsh7n2nx8ndmm1mmww6v2h4851nalj13-glibc-2.42-61-bin' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.4922927Z copying path '/nix/store/phzxi1l7gcm9slvikj9w4yswd89hi14x-libyaml-0.2.5' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.5262062Z copying path '/nix/store/csra6zhdjw7rjzv98fycz7qjalyv55k2-xz-5.8.3-bin' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.5900367Z copying path '/nix/store/qwyl8kb0r3bsml0k7hz1zj75i0x9dyxq-libtool-2.5.4-lib' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.6203118Z copying path '/nix/store/7dr4qx9ws30cdh9if3x79pbby3nxakrf-libmpg123-1.33.4' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.6229923Z copying path '/nix/store/g273dhprbasws60m9867jdc5s2az689d-libpciaccess-0.19' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.6231730Z copying path '/nix/store/kz9nf4vb7pg38411r2aaa634k1p4klvc-libogg-1.3.6' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.6569986Z copying path '/nix/store/cspsij182bd9hsx64mz1p7p143inkrjn-gmp-with-cxx-6.3.0' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.6860425Z copying path '/nix/store/ilblcn1dkvzghcr2yk3av6jxn5rk1iqw-patchelf-0.15.2' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.7025385Z copying path '/nix/store/wjfhh11sfcdf97mvg7hbxickybxzk850-numactl-2.0.18' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.7103792Z copying path '/nix/store/rsmk7psm9kph06fdjay1g97syi8g6g7c-gtest-1.17.0' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.7230515Z copying path '/nix/store/y56aqb1m3y5davn6hsv4jfbml78qw4mv-gmp-with-cxx-6.3.0' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.7297956Z copying path '/nix/store/456fxgcc00kjlzmikjx55ahp8nng55rs-libimagequant-4.4.1' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.7317655Z copying path '/nix/store/5fn8yh764qsrd3hq7zfsy1y1qdifwj79-graphite2-1.3.14' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.7605770Z copying path '/nix/store/r4z9iqiagmr78kzx0vswa5hspi1aq8wn-mbedtls-3.6.6' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.7651183Z copying path '/nix/store/q467fsvyhfjbv2vym2yziarzvrh45k7k-flac-1.5.0' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.7944505Z copying path '/nix/store/81xib6667nkj5l0hmkis3m211w878l7j-util-linux-minimal-2.42-mount' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.8060638Z copying path '/nix/store/84vyyygz11han4c3wvip3zb30zh2jdzc-util-linux-minimal-2.42-swap' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.8070693Z copying path '/nix/store/9ypz3flqsrl5xl495mm8h645gadjsxi1-coreutils-9.11' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.8244519Z copying path '/nix/store/ypm8qd5nw5y0k97j08pjvcscys92vliq-x265-4.1' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.8259007Z copying path '/nix/store/kawx5fdjxa7r9idd689qxvhc6r580zh1-libtasn1-4.21.0' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.8270230Z copying path '/nix/store/15h9askp4k1lx44d9871wid23j2a8ijp-glibc-2.42-61-dev' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.8583083Z copying path '/nix/store/b89rbd2k8k3a8va6xkmh4nizgrpwv0y4-wayland-1.25.0' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.8769130Z copying path '/nix/store/mrvg2vykjhhdlh28bh7h3mqrnmyiajzw-nettle-3.10.2' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.8775059Z copying path '/nix/store/1x7jd3s747a24p4fsywfldb629plxacq-libevent-2.1.12' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.8779684Z copying path '/nix/store/xwd1hzks7birljbwqd0l25blaa2qz1h7-util-linux-minimal-2.42-login' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.8781679Z copying path '/nix/store/1n64d2v17vqap62nyg7lbacrj0aj395d-libsamplerate-0.2.2' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.8952758Z copying path '/nix/store/vqyqaaar0dvcdbmzsap60r96n1va0idd-libpng-apng-1.6.56' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.9086401Z copying path '/nix/store/g2cwwnjsivg7br1i90vlmg5jaz9np2kv-fftw-single-3.3.10' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.9100099Z copying path '/nix/store/7a235m7crqbb4h49sak20fqxpw3n7hr0-ninja-1.13.2' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.9209231Z copying path '/nix/store/bck1xkk9m0f60352gnjb512ix0n4x9qm-libxml2-2.15.2' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:03.9332461Z copying path '/nix/store/bj94qv4isp33qdv9rj61yqd534dzqs80-p11-kit-0.26.2' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:04.0020028Z copying path '/nix/store/27gglbzc3cy31m70q4p5gjwr54wvl0x4-python3.13-grpcio-1.80.0' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:04.0226740Z copying path '/nix/store/c1cjgg6p8m8fssivzrc2p13mwwml3p3v-findutils-4.10.0' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:04.0305011Z copying path '/nix/store/ww555mznia5v7sz2w85lblg4amvhkhv1-diffutils-3.12' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:04.0396478Z copying path '/nix/store/6plwsm6pkq79yjv4xvy8csk2pd4hzr67-perl-5.42.0' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:04.0457177Z copying path '/nix/store/ylf24iiwy5xphy8wfz6jgahncsfgsy2r-readline-8.3p3' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:04.0463145Z copying path '/nix/store/05pzsrj4dmxlfwf8z70hp5vfgvfvfa54-systemd-minimal-libs-260.1' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:04.0720389Z copying path '/nix/store/a9n3345hndg2z6iwbi7m59gvkwcd264j-freetype-2.14.2' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:04.1081924Z copying path '/nix/store/vg3wx5csgpsix6b76n71nkrlj52q9018-unbound-1.25.0-lib' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:04.1185184Z copying path '/nix/store/zyrxhd7nwmkcs11m144jagxcmddw2i41-openssl-3.6.2-bin' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:04.1591088Z copying path '/nix/store/ixgz746lafcas39mpysz9fq49i6v8syd-libyuv-1908' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:04.2201439Z copying path '/nix/store/jlyahda14aya375lv7k9fsin2zk90nxz-glib-2.88.1' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:04.2232719Z copying path '/nix/store/60m4rxhg2fldqaak400c0lry96ijrzqn-python3-3.13.13' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:04.2604154Z copying path '/nix/store/s2946bl9ciwzhafd66jhansrmxq9xhqm-binutils-2.46' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:04.2760903Z copying path '/nix/store/v1qmqzyvyq91pfgsjx8cpzfrlhnxsw0z-abseil-cpp-20260107.1' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:04.2934810Z copying path '/nix/store/b6raakvsa23phwwhzq0a41bnfbr0z74v-speexdsp-1.2.1' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:04.3135787Z copying path '/nix/store/gd74vdpqzq0qmmikvmrf3r3kghhhnf50-zstd-1.5.7' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:04.3565084Z copying path '/nix/store/81ff57hcs8gjlnaqqhbilzxsvb5pfzaa-stdenv-linux' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:04.3577508Z copying path '/nix/store/k5vzpmslg2aqrqa93cxigbmii560fliq-libwebp-1.6.0' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:04.4157656Z copying path '/nix/store/n2qf6xg33jak5cfykmw1lx3z823hnkas-lerc-4.1.0' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:04.4345469Z copying path '/nix/store/qdnz4adgz6p65pfxaw3w3q6zx3hbaa3x-libdeflate-1.25' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:04.4779143Z copying path '/nix/store/0hjbb0k3zn1y8fqm5sn0zfr2h5874qg1-libxdmcp-1.1.5' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:04.4793606Z copying path '/nix/store/0nrv9x54jzw1pyqz8kd53a6zckhc1zhn-libxau-1.0.12' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:04.4987588Z copying path '/nix/store/w9xqc6yk8vnvd3xh46x3jkpha8fygbvp-gnutls-3.8.13' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:04.5420604Z copying path '/nix/store/r50gpjb5pcl01c7nvhrn31rnwsnhzplg-gmp-6.3.0' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:04.5614756Z copying path '/nix/store/zzrv2kz5gv9mch8kwqcbifsz5lmv5rnv-kmod-31' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:04.6247042Z copying path '/nix/store/vf1h0mcc5xpasmsm771h2ngk9x8nqkn2-librist-0.2.11' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:04.6359174Z copying path '/nix/store/gsi4v2vmizrw84p603lx9mfy1ljcwggh-kmod-31-lib' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:04.6369294Z copying path '/nix/store/nvickifc1d6r6kq20f8nq55fms54hz5w-libvmaf-3.0.0' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:04.6397557Z copying path '/nix/store/v125s7ad2ni0r1vxw6bp3x0hg0rd403x-openblas-0.3.32' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:04.6685211Z copying path '/nix/store/jj27mc075js673vkgd8fy6xxr34n8n9i-libxcb-1.17.0' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:04.6728338Z copying path '/nix/store/002784hlqqxjqfw6fmr55w6b1y5k33yl-libssh-0.12.0' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:04.6754915Z copying path '/nix/store/3669nnxilz1y16ifi9nzdkyljhcihx2p-ocl-icd-2.3.4' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:04.6800306Z copying path '/nix/store/41b8kcrrjd20gbs1v7bar29arr9wn151-alsa-ucm-conf-1.2.15.3' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:04.6913485Z copying path '/nix/store/1dpqga4nhq4mla9d0g9f0apk4ckyafla-abseil-cpp-20260107.1-dev' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:04.7239269Z copying path '/nix/store/jjp9vc7vfrflxnliwkwblzadnyyw2zj2-libtiff-4.7.1' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:04.7375727Z copying path '/nix/store/17rqw7p3j0vvvwja05l6bq2im8qpxcl7-isl-0.20' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:04.8632611Z copying path '/nix/store/cfjm0s2jnlaiz9y3byvfa0fc6fp2la20-systemd-minimal-260.1' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:04.8769952Z copying path '/nix/store/1pisgmvq4cgcrhfa3ynn5i712jm1ifil-libaom-3.12.1' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:04.8923091Z copying path '/nix/store/drmzcl1j9wwwgz4q87dvz2p2zfwnp4w3-mpfr-4.2.2' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:04.9027311Z copying path '/nix/store/40kvg6g8ww9k9d116fiv7r9kwxhg4n7s-libwebp-1.6.0' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:04.9060665Z copying path '/nix/store/viv5274f8mkvkg9df7karvl4ffwp0xkb-openjpeg-2.5.4' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:04.9250691Z copying path '/nix/store/3q4wwqny99xr196bg2j5s2mn0pkrg5vi-svt-av1-3.1.2' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:05.1599768Z copying path '/nix/store/48krja1dqwpsa0i3yw9v47hbcxn7agrh-fontconfig-2.17.1-lib' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:05.1679112Z copying path '/nix/store/7gwd2kvkx1s369cwiv5z4x2xjxbppav6-libx11-1.8.13' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:05.1707564Z copying path '/nix/store/3zqm4hxrxarx85cxd03gj5yvxkzialqj-alsa-lib-1.2.15.3' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:05.2085963Z copying path '/nix/store/0j6jil4xc4ndp0kcqzjwbfywxvifl160-libmpc-1.4.0' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:05.2427928Z copying path '/nix/store/7lvnra5yii4r4p0cv516fpsjyny6v9lj-zvbi-0.2.44' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:05.3961128Z copying path '/nix/store/8fbsxg75a01nm3ivxg8kl3zxd7wx34p2-libdrm-2.4.133' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:05.4700876Z copying path '/nix/store/8rmf590yl9v5d29xk8xfs90y82ikc2yy-srt-1.5.4' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:05.5103763Z copying path '/nix/store/alsxw6b2rdwhmw3rq41d3kbk02km20wh-v4l-utils-1.32.0' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:05.5209035Z copying path '/nix/store/qxaq7jz61a6zkr2mq49i0zvqip2m2jj8-gcc-15.2.0' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:05.5913488Z copying path '/nix/store/b05yg75a01zvz9ag9qk1q21b5331fn38-soxr-0.1.3' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:05.5915258Z copying path '/nix/store/d6vnmfmcz5b299180issiaad4m96wh8k-vulkan-loader-1.4.341.0' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:05.5923614Z copying path '/nix/store/armsfbcsbzax7pnkim9cqgkx8n747n31-protobuf-34.1' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:05.6455449Z copying path '/nix/store/gjbj67bwm80bwdfmifzzqi1sc5j0dg5q-libvpx-1.16.0' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:05.7905964Z copying path '/nix/store/i8dcswdbyy337aw266f922lbik0jy8g6-dconf-0.49.0-lib' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:05.8532031Z copying path '/nix/store/5d5gq4hcclz3mwikka3ykh924p610bdr-gdk-pixbuf-2.44.6' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:05.9402582Z copying path '/nix/store/f9yj1bxn989y7fdrb4jaxd7kjrm3ajbk-libxfixes-6.0.2' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:05.9438943Z copying path '/nix/store/l1im0bii1ld332kcgg0gr72k6xla2dq1-libxext-1.3.7' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:06.0122385Z copying path '/nix/store/bd9nkv00cbnj19zc61rlqyrjvnlmq73j-harfbuzz-13.2.1' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:06.0319076Z copying path '/nix/store/hfnk357mb1n0yyvvz7wdprh7nwsi0vqk-vid.stab-1.1.1-unstable-2025-08-21' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:06.0612095Z copying path '/nix/store/i6ydjjps5z11kcljpkqnpg9abf536ylv-libbluray-1.4.1' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:06.0869366Z copying path '/nix/store/kdrf8f2x3gg7kwa236mj49zsqf97x6c8-openapv-0.2.1.2' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:06.0901657Z copying path '/nix/store/dpi7sgi4dmnddwjwdi57d8x06sx49vkn-libglvnd-1.7.0' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:06.0927420Z copying path '/nix/store/iqr51pwna7daax80l4c1rh3lp7mxlwvm-libvdpau-1.5' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:06.1159450Z copying path '/nix/store/ksami5im2kz3przdlh55349gsrkl0mfj-lame-3.100-lib' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:06.2029894Z copying path '/nix/store/mgvggj78cigpkzdspqbh0m17fvaadhak-libtheora-1.2.0' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:06.2267146Z copying path '/nix/store/mp0glxb79yk04qyafq08kmapp831qc3c-zimg-3.0.6' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:06.2505811Z copying path '/nix/store/q7xxk3bzyhp4b4f3685z0mp8grg3r5l8-libvorbis-1.3.7' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:06.2508000Z copying path '/nix/store/s1hjbyg12jj4q3m5drn4i6prgwhr437w-libopus-1.6.1' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:06.2536481Z copying path '/nix/store/qhkwr0h5zxmmbnircw05rn7ksp2wnb2w-x264-0-unstable-2025-01-03-lib' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:06.2886618Z copying path '/nix/store/sm8plkabc1ngyazcf4imsxfiafs4lj15-xvidcore-1.3.7' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:06.3631104Z copying path '/nix/store/19ird1a31plmgjhppsqww9xs8z4wzlqr-libva-2.23.0' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:06.3652628Z copying path '/nix/store/yhqv8xk34fq7b4d4y7rh6inw4l8yhp7k-libraqm-0.10.5' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:06.3662470Z copying path '/nix/store/9d3f33x2vk5hhlmidy7mzzpryn14s3ns-libass-0.17.4' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:06.3804376Z copying path '/nix/store/n25h7sb6dd4q68fk4b8sn92dd3ws4563-libavif-1.4.1' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:06.4705239Z copying path '/nix/store/483wixjigga3ikcn57169zpwr30l6qvf-libsndfile-1.2.2' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:06.7423155Z copying path '/nix/store/ndadbpc4s7b5j2l9vsm2jw8pzfyn8r0v-dbus-1.16.2-lib' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:06.7678728Z copying path '/nix/store/mbyy19mdwnfvfwmdi0gqgggx0njvpl1w-binutils-wrapper-2.46' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:06.8378100Z copying path '/nix/store/ba0pync7rmzsq32xxaz9l9hs3zj7hil4-blas-3' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:06.8388568Z copying path '/nix/store/nmzb24chkjhj581y4dd6006lw7yvwwrh-lapack-3' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:06.8483862Z copying path '/nix/store/g04j1g5niwibk6h6l5j407476was6av6-libjack2-1.9.22' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:06.8488025Z copying path '/nix/store/7fnjx0b7a7f80055i43v9pwbx25lwh0v-libpulseaudio-17.0' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:06.8577377Z copying path '/nix/store/armlmpg50zxhvzhd5kd893vg8839jqfq-python3.13-torch-2.11.0-lib' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:07.1821153Z copying path '/nix/store/9qxv3ymy8cikbk007hc8gg76gxvn0agd-mpg123-1.33.4' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:07.3312374Z copying path '/nix/store/92c7phs98c63hasf8b1sm2g15xlzaqnm-libopenmpt-0.8.6' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:07.5181160Z copying path '/nix/store/xvrjmskfrp07gmh1zzlyfkv50nw40dcv-ffmpeg-8.1-lib' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:08.7674012Z copying path '/nix/store/4475dvkkvpds695bmfz836x4nic1xz8j-blas-3-dev' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:08.8262824Z copying path '/nix/store/6jn2ikrwa12m9k14gw5jqbhqarwhnkpl-lapack-3-dev' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:09.3367180Z copying path '/nix/store/xglji60s6kjbgzypj446yldrbjrgh53r-pybind11-setup-hook' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:09.3385226Z copying path '/nix/store/czhhpqfd9cz9c24gb3limln4ch201bhq-python3.13-attrs-26.1.0' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:09.3392792Z copying path '/nix/store/dddj23r1wqpa6f9csjr37661hv5aq4gy-python3.13-certifi-2026.01.04' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:09.3399197Z copying path '/nix/store/4zv7hxkwpv4r83fdh9jmwn1649z6wazl-python3.13-charset-normalizer-3.4.7' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:09.3401409Z copying path '/nix/store/bmnc2zsbqv95ypawxrvn8z9brn6lkmbl-python3.13-absl-py-2.3.1' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:09.3410666Z copying path '/nix/store/06jh6y14mh3rd0d5nzsjb8rb79g25s7a-python3.13-expecttest-0.3.0' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:09.3433641Z copying path '/nix/store/cqcj15d0ps9hlqhg4izz8f8nvv64fa7s-python3.13-fsspec-2026.3.0' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:09.3439133Z copying path '/nix/store/zai28h1jn6sgj088a1nf82ahsz0gdxkh-python3.13-markdown-3.10.2' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:09.3445165Z copying path '/nix/store/7kzhhwp7zqj3gz7g4an960pdq1c98an5-python3.13-markupsafe-3.0.3' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:09.3454419Z copying path '/nix/store/ansrwva02lf81zsaq9kpkvy3f5kacgqz-python3.13-mpmath-1.4.1' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:09.3463285Z copying path '/nix/store/l1p5h92m7vwhqif45xq2hww0cjqcw6my-python3.13-networkx-3.6.1' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:09.3465078Z copying path '/nix/store/ilklwlxgcc06hq4ihyhxs51yd6syywkm-python3.13-ninja-1.13.2' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:09.3490568Z copying path '/nix/store/w0ifzb6nrg9izlxk018dva2770g32yba-python3.13-filelock-3.20.3' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:09.3496026Z copying path '/nix/store/yclf543g13ngziva0j30prwr0rx3kc4h-python3.13-idna-3.13' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:09.4682281Z copying path '/nix/store/l59n6vzkswz23y6s4pr6cmv2p4dpd5f0-python3.13-numpy-2.4.4' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:09.4797990Z copying path '/nix/store/1zac3f2hkdf2wwh4zh34knqi160xc9fc-python3.13-jinja2-3.1.6' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:09.4809653Z copying path '/nix/store/7flzx37n5pkws0bhlmi7scwrf7kmwjxp-python3.13-packaging-26.1' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:09.4881100Z copying path '/nix/store/994wwib8zablg0x797i28zsv0ya890h1-python3.13-pillow-12.2.0' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:09.5173421Z copying path '/nix/store/qjhlyhshylzcspfxfw21vhsmdvm0k6jx-python3.13-protobuf-7.34.1' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:09.5321596Z copying path '/nix/store/3rkc985ffzr3pkimmwnr6pyfsjn7zwp4-python3.13-psutil-7.2.2' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:09.5472321Z copying path '/nix/store/8y32jrqnknxj6hakyg8x64y75gbl8jry-python3.13-pyyaml-6.0.3' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:09.5536164Z copying path '/nix/store/25rr86lli13limp2np2xfqhq0x8lwjgv-python3.13-setuptools-80.10.1' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:09.5552095Z copying path '/nix/store/js9am9k26yhv887r63ka93d8xaxk0if3-python3.13-pybind11-3.0.4' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:09.5993305Z copying path '/nix/store/n15xkpcwi9g157qnixycm8w1gsfw7mgz-python3.13-six-1.17.0' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:09.7758407Z copying path '/nix/store/m2b0s5h6wi0yrjyxdz2bnbjkv5ldahry-python3.13-sortedcontainers-2.4.0' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:09.7857280Z copying path '/nix/store/d9jbrr4ab7hfx2d4qz2fqv83ybs0w253-python3.13-standard-imghdr-3.13.0' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:09.8161306Z copying path '/nix/store/0wnp6d7lphr6s87qbc8bhr1xkvs4dd1j-python3.13-tensorboard-data-server-0.7.2' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:09.8352165Z copying path '/nix/store/ygn7pmns1y10ikvn6f0mgz70i0ahsk7f-python3.13-types-dataclasses-0.6.6' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:09.8503176Z copying path '/nix/store/kqdr0pijf558v8p6bm0i246jnhhh4ckq-python3.13-typing-extensions-4.15.0' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:09.8627874Z copying path '/nix/store/hd9vsw1ajhl9031aq4chw08zfjamv754-python3.13-urllib3-2.6.3' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:09.9330291Z copying path '/nix/store/69qnac9r0lp6nqlxyy7p1h06pxz1mmpd-python3.13-werkzeug-3.1.6' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:10.0076004Z copying path '/nix/store/5j4am4m6idfk29p9sbmwvr3kr8wxxl80-python3.13-wheel-0.46.1' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:10.0328035Z copying path '/nix/store/vxir2djb4zn6z1s221bpcpw72q4aj66w-python3.13-hypothesis-6.151.10' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:10.0330499Z copying path '/nix/store/ap3x6426spqjd7lfakfyy9v5znzhzk1p-python3.13-grpcio-1.80.0-dev' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:10.0972130Z copying path '/nix/store/rks4c012hxa7z01sfc7w4p7mn74zfp2x-python3.13-requests-2.33.1' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:10.1642725Z copying path '/nix/store/klkhmsknrmnpqs7j8wzbhyq80g2yfwy8-python3.13-astunparse-1.6.3' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:10.1700121Z copying path '/nix/store/dz5xars1w3pi7xagc79ggnv340mbbqng-python3.13-sympy-1.14.0' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:11.0882142Z copying path '/nix/store/vdaxrah89n642jn4vd0a9jp9ck30xqan-python3.13-triton-3.6.0' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:12.4922313Z copying path '/nix/store/nhhncg5q5yzqjp66f8vax70r89zvd2jb-python3.13-tensorboard-2.20.0' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:13.3993285Z copying path '/nix/store/788mx070y81zjlg5ipcl0cra3afviw9k-gcc-wrapper-15.2.0' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:13.5315356Z copying path '/nix/store/scadi7kx5gq7yvy8kkgxsflypfbycblb-make-binary-wrapper-hook' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:17.6657154Z copying path '/nix/store/rpbm327sm6nwik6v9gd81mf8y1qz41q3-python3.13-torch-2.11.0' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:20.8200760Z copying path '/nix/store/xr8i7smgy8jg8jmkalvssqfddcppd6qx-python3.13-torch-2.11.0-dev' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:21.6571053Z copying path '/nix/store/lxf9hcwwkgf2h0ib5a2yyma1jyjqkp8f-python3.13-torchcodec-0.11.1' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:21.9178820Z building '/nix/store/f5ms130w6bgw8ll1bara1s9hv9agyb27-python3-3.13.13-env.drv'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:23.9401881Z building '/nix/store/rn0v1pif4ww2ydw5a7f52q85c1njcgwa-nix-shell-env.drv'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:24.5453385Z these 2 paths will be fetched (1.7 MiB download, 7.2 MiB unpacked):
+nix-gate	Native import and linker gate	2026-11-25T22:47:24.5455280Z   /nix/store/cgjr3kj3hs7ngznyws5qfg16c8scpys0-bash-interactive-5.3p9
+nix-gate	Native import and linker gate	2026-11-25T22:47:24.5456670Z   /nix/store/73fr7zjwc2s46y7vrq8563237l0ivqcb-bash-interactive-5.3p9-man
+nix-gate	Native import and linker gate	2026-11-25T22:47:24.5474055Z copying path '/nix/store/73fr7zjwc2s46y7vrq8563237l0ivqcb-bash-interactive-5.3p9-man' from 'http://127.0.0.1:37515'...
+nix-gate	Native import and linker gate	2026-11-25T22:47:24.5475980Z copying path '/nix/store/cgjr3kj3hs7ngznyws5qfg16c8scpys0-bash-interactive-5.3p9' from 'http://127.0.0.1:37515'...
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	﻿2026-11-25T22:47:27.4454824Z Post job cleanup.
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:28.0859028Z [command]/usr/bin/sudo mkdir -p /var/lib/determinate
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:28.7536986Z   ^[[2m2026-11-25T22:47:28.751223Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::api^[[0m^[[32m: ^[[32mWorkflow finished^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:28.7544591Z     ^[[2;3mat^[[0m magic-nix-cache/src/api.rs:58
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:28.7545285Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:28.7546538Z   ^[[2m2026-11-25T22:47:28.751248Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::api^[[0m^[[32m: ^[[32mWaiting for GitHub action cache uploads to finish^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:28.7547955Z     ^[[2;3mat^[[0m magic-nix-cache/src/api.rs:98
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:28.7548550Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:30.0336541Z   ^[[2m2026-11-25T22:47:30.032415Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/c1cjgg6p8m8fssivzrc2p13mwwml3p3v-findutils-4.10.0' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:30.0338229Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:30.0338848Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:31.9642806Z   ^[[2m2026-11-25T22:47:31.963041Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/chqq8mpmpyfi9kgsngya71akv5xicn03-gcc-15.2.0-lib' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:31.9644556Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:31.9644979Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:33.2401358Z   ^[[2m2026-11-25T22:47:33.238936Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/cickvswrvann041nqxb0rxilc46svw1n-prune-libtool-files.sh' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:33.2403906Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:33.2404474Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:34.5616936Z   ^[[2m2026-11-25T22:47:34.560288Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/cmzya9irvxzlkh7lfy6i82gbp0saxqj3-multiple-outputs.sh' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:34.5618843Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:34.5620017Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:36.1766753Z   ^[[2m2026-11-25T22:47:36.175367Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/cspsij182bd9hsx64mz1p7p143inkrjn-gmp-with-cxx-6.3.0' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:36.1768846Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:36.1769164Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:37.6000366Z   ^[[2m2026-11-25T22:47:37.598911Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/csra6zhdjw7rjzv98fycz7qjalyv55k2-xz-5.8.3-bin' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:37.6002206Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:37.6002813Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:38.8603004Z   ^[[2m2026-11-25T22:47:38.858681Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/cv1d7p48379km6a85h4zp6kr86brh32q-audit-tmpdir.sh' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:38.8606168Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:38.8606584Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:40.1255868Z   ^[[2m2026-11-25T22:47:40.124280Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/fyaryjvghbkpfnsyw97hb3lyb37s1pd6-move-lib64.sh' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:40.1257695Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:40.1258588Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:41.7168256Z   ^[[2m2026-11-25T22:47:41.715572Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/gn94gpcp5q08x4v6g8mvw8v4r65rcjzk-gnugrep-3.12' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:41.7170517Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:41.7171132Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:43.1585265Z   ^[[2m2026-11-25T22:47:43.157064Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/ilblcn1dkvzghcr2yk3av6jxn5rk1iqw-patchelf-0.15.2' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:43.1586810Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:43.1587094Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:44.8111672Z   ^[[2m2026-11-25T22:47:44.809901Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/k5akwnrn9x2afaj2va7g4a2zpdim8l43-gnutar-1.35' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:44.8113851Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:44.8114550Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:46.0738562Z   ^[[2m2026-11-25T22:47:46.072687Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/kd4xwxjpjxi71jkm6ka0np72if9rm3y0-move-sbin.sh' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:46.0745675Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:46.0747103Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:47.5274308Z   ^[[2m2026-11-25T22:47:47.526380Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/kgxafhycw2kybbqih759ykc2043qyi5j-gnused-4.9' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:47.5275847Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:47.5276491Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:49.1279836Z   ^[[2m2026-11-25T22:47:49.126493Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/kyz3mm5snbb8998kbkm28jps1phk9509-file-5.47' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:49.1293902Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:49.1294336Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:50.5307984Z   ^[[2m2026-11-25T22:47:50.529674Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/ndpbjk6jhw0da5h272dqqnyxa35a9gmx-gzip-1.14' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:50.5310692Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:50.5312191Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:51.7847456Z   ^[[2m2026-11-25T22:47:51.783767Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/p3l1a5y7nllfyrjn2krlwgcc3z0cd3fq-make-symlinks-relative.sh' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:51.7849365Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:51.7850589Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:53.0641217Z   ^[[2m2026-11-25T22:47:53.063006Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/pag6l61paj1dc9sv15l7bm5c17xn5kyk-move-systemd-user-units.sh' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:53.0643381Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:53.0644294Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:54.3696136Z   ^[[2m2026-11-25T22:47:54.368357Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/pilsssjjdxvdphlg2h19p0bfx5q0jzkn-strip.sh' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:54.3698016Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:54.3698961Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:55.7042015Z   ^[[2m2026-11-25T22:47:55.703121Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/v2dzxxlyf0z8njnr3nar1wmdiw6hssb6-attr-2.5.2' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:55.7044255Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:55.7044778Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:57.2622284Z   ^[[2m2026-11-25T22:47:57.261197Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/vlq7nnw39j7rwk0pp68w1fcwzpxahm9h-gnumake-4.4.1' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:57.2624326Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:57.2625018Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:58.8441558Z   ^[[2m2026-11-25T22:47:58.843070Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/waz72vmxc8zk90qqvgg9ikhzdk1kzjy4-xz-5.8.3' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:58.8443798Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:47:58.8444378Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:00.3503976Z   ^[[2m2026-11-25T22:48:00.349190Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/wgvplwp0faqhqr92w0ma8bxaxk202ama-patch-2.8' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:00.3506285Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:00.3506974Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:02.2141817Z   ^[[2m2026-11-25T22:48:02.213126Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/wp1cshqv98i8abs8rcx91s54igqgll0f-gawk-5.4.0' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:02.2143915Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:02.2144201Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:03.7894400Z   ^[[2m2026-11-25T22:48:03.788378Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/ww555mznia5v7sz2w85lblg4amvhkhv1-diffutils-3.12' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:03.7896491Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:03.7897023Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:05.0762281Z   ^[[2m2026-11-25T22:48:05.075030Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/x8c40nfigps493a07sdr2pm5s9j1cdc0-patch-shebangs.sh' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:05.0764411Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:05.0764945Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:06.3859779Z   ^[[2m2026-11-25T22:48:06.384893Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/xknj6c33cc197s60ry0i69vdkmaizrs1-update-autotools-gnu-config-scripts-hook' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:06.3862237Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:06.3862680Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:07.6902346Z   ^[[2m2026-11-25T22:48:07.689311Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/xyff06pkhki3qy1ls77w10s0v79c9il0-reproducible-builds.sh' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:07.6904177Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:07.6905155Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:09.0309029Z   ^[[2m2026-11-25T22:48:09.029703Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/xyikkpwkyxx6syba3kfrr0h67ig5hwmn-gcc-15.2.0-libgcc' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:09.0322652Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:09.0322904Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:10.4355975Z   ^[[2m2026-11-25T22:48:10.434499Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/yxla342pd0453pz2k0yybnyy1hig8dv4-acl-2.3.2' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:10.4357960Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:10.4358731Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:11.6884607Z   ^[[2m2026-11-25T22:48:11.687135Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/z7k98578dfzi6l3hsvbivzm7hfqlk0zc-set-source-date-epoch-to-latest.sh' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:11.6887417Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:11.6888123Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:13.0751374Z   ^[[2m2026-11-25T22:48:13.074059Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/zmvllxxx62iys7vpyg020rni3v29bcxi-gnu-config-2024-01-01' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:13.0753836Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:13.0754746Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:15.1638911Z   ^[[2m2026-11-25T22:48:15.162652Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/27gglbzc3cy31m70q4p5gjwr54wvl0x4-python3.13-grpcio-1.80.0' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:15.1641360Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:15.1641853Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:16.6566253Z   ^[[2m2026-11-25T22:48:16.655619Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/dadk381crh40alsk19jhn4m828szsj6b-c-ares-1.34.6' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:16.6567931Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:16.6568612Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:18.5956898Z   ^[[2m2026-11-25T22:48:18.594709Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/y18pnbvfarnilsmgayswvi1khaw9wbsc-openssl-3.6.2' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:18.5958925Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:18.5960027Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:21.1703530Z   ^[[2m2026-11-25T22:48:21.169064Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/6plwsm6pkq79yjv4xvy8csk2pd4hzr67-perl-5.42.0' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:21.1707403Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:21.1709037Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:22.5785903Z   ^[[2m2026-11-25T22:48:22.577493Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/g23gmzxz2asin32kxdnz7cvq5i4fx3an-libxcrypt-4.5.2' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:22.5787881Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:22.5788829Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:24.2543894Z   ^[[2m2026-11-25T22:48:24.253168Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/1scb6xccxlqy8rj9hfgf7ppqv99pfwq9-util-linux-minimal-2.42-lib' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:24.2546456Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:24.2546852Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:25.6361834Z   ^[[2m2026-11-25T22:48:25.635149Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/2zs4bbi72plfm8j6zxf1js4f3yc4yzwy-libffi-3.5.2' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:25.6363878Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:25.6365844Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:29.4233219Z   ^[[2m2026-11-25T22:48:29.422276Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/60m4rxhg2fldqaak400c0lry96ijrzqn-python3-3.13.13' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:29.4235261Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:29.4235734Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:30.8106876Z   ^[[2m2026-11-25T22:48:30.809456Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/8wrmi2fp3wvn2w6ikdfgzspyr8nwn934-mailcap-2.1.54' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:30.8108669Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:30.8109295Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:32.3505549Z   ^[[2m2026-11-25T22:48:32.349455Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/d8927sznk6qnqln6hl9p4d42h8pq49vg-expat-2.8.0' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:32.3507151Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:32.3507628Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:33.9365869Z   ^[[2m2026-11-25T22:48:33.935600Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/v2hsfkf03b3l79rhcxw4nq7w79kr3qkw-tzdata-2026b' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:33.9368086Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:33.9368796Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:35.4381331Z   ^[[2m2026-11-25T22:48:35.437119Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/v9sym7lkcp6nj2llsqhajvp2zmimv5v1-mpdecimal-4.0.1' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:35.4383211Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:35.4384092Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:37.0971948Z   ^[[2m2026-11-25T22:48:37.096125Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/wl2nw5l4x4dg6kclbgpq7v9212i1s6cy-ncurses-6.6' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:37.0974176Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:37.0974850Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:38.8906454Z   ^[[2m2026-11-25T22:48:38.889515Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/yg1gv8db04ldrnmdhykq8zjqqg6pg5kd-sqlite-3.51.2' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:38.8908539Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:38.8909174Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:40.4237627Z   ^[[2m2026-11-25T22:48:40.422740Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/ylf24iiwy5xphy8wfz6jgahncsfgsy2r-readline-8.3p3' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:40.4239734Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:40.4240928Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:41.9594744Z   ^[[2m2026-11-25T22:48:41.958447Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/zswf4c2na0d8ykb59rrp14748jb0w2wc-gdbm-1.26-lib' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:41.9596523Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:41.9597267Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:43.2367858Z   ^[[2m2026-11-25T22:48:43.233591Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/7kzhhwp7zqj3gz7g4an960pdq1c98an5-python3.13-markupsafe-3.0.3' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:43.2370758Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:43.2371621Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:44.7543975Z   ^[[2m2026-11-25T22:48:44.753356Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/6snfrwakqanqp7c21nnzmz183fkhnzv1-nss-cacert-3.123' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:44.7545936Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:44.7546889Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:46.2064284Z   ^[[2m2026-11-25T22:48:46.205271Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/dddj23r1wqpa6f9csjr37661hv5aq4gy-python3.13-certifi-2026.01.04' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:46.2066411Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:46.2066823Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:47.5470220Z   ^[[2m2026-11-25T22:48:47.545917Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/w0ifzb6nrg9izlxk018dva2770g32yba-python3.13-filelock-3.20.3' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:47.5472002Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:47.5472487Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:49.0868228Z   ^[[2m2026-11-25T22:48:49.085687Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/yclf543g13ngziva0j30prwr0rx3kc4h-python3.13-idna-3.13' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:49.0870234Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:49.0870715Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:50.6860408Z   ^[[2m2026-11-25T22:48:50.684934Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/4zv7hxkwpv4r83fdh9jmwn1649z6wazl-python3.13-charset-normalizer-3.4.7' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:50.6862225Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:50.6862671Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:52.1640890Z   ^[[2m2026-11-25T22:48:52.162926Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/czhhpqfd9cz9c24gb3limln4ch201bhq-python3.13-attrs-26.1.0' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:52.1643760Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:52.1644231Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:53.4419456Z   ^[[2m2026-11-25T22:48:53.440851Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/06jh6y14mh3rd0d5nzsjb8rb79g25s7a-python3.13-expecttest-0.3.0' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:53.4421694Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:53.4423098Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:54.9581394Z   ^[[2m2026-11-25T22:48:54.957094Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/7a235m7crqbb4h49sak20fqxpw3n7hr0-ninja-1.13.2' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:54.9583502Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:54.9584001Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:56.2727955Z   ^[[2m2026-11-25T22:48:56.271833Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/ilklwlxgcc06hq4ihyhxs51yd6syywkm-python3.13-ninja-1.13.2' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:56.2729983Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:56.2730848Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:57.8225535Z   ^[[2m2026-11-25T22:48:57.821507Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/zai28h1jn6sgj088a1nf82ahsz0gdxkh-python3.13-markdown-3.10.2' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:57.8227469Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:57.8228049Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:59.1314119Z   ^[[2m2026-11-25T22:48:59.130455Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/n15xkpcwi9g157qnixycm8w1gsfw7mgz-python3.13-six-1.17.0' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:59.1315500Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:48:59.1315804Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:00.6506725Z   ^[[2m2026-11-25T22:49:00.649298Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/bmnc2zsbqv95ypawxrvn8z9brn6lkmbl-python3.13-absl-py-2.3.1' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:00.6509242Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:00.6509975Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:02.1717884Z   ^[[2m2026-11-25T22:49:02.170755Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/8y32jrqnknxj6hakyg8x64y75gbl8jry-python3.13-pyyaml-6.0.3' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:02.1720128Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:02.1723043Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:03.5829827Z   ^[[2m2026-11-25T22:49:03.581901Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/phzxi1l7gcm9slvikj9w4yswd89hi14x-libyaml-0.2.5' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:03.5831709Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:03.5832163Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:05.2186376Z   ^[[2m2026-11-25T22:49:05.217621Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/7flzx37n5pkws0bhlmi7scwrf7kmwjxp-python3.13-packaging-26.1' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:05.2188500Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:05.2189897Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:06.9146521Z   ^[[2m2026-11-25T22:49:06.913634Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/cqcj15d0ps9hlqhg4izz8f8nvv64fa7s-python3.13-fsspec-2026.3.0' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:06.9148619Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:06.9152226Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:08.5328082Z   ^[[2m2026-11-25T22:49:08.531777Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/3rkc985ffzr3pkimmwnr6pyfsjn7zwp4-python3.13-psutil-7.2.2' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:08.5330139Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:08.5330614Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:10.0606615Z   ^[[2m2026-11-25T22:49:10.059198Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/1zac3f2hkdf2wwh4zh34knqi160xc9fc-python3.13-jinja2-3.1.6' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:10.0609205Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:10.0610037Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:11.8278811Z   ^[[2m2026-11-25T22:49:11.826601Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/1dpqga4nhq4mla9d0g9f0apk4ckyafla-abseil-cpp-20260107.1-dev' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:11.8281098Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:11.8281780Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:13.9055129Z   ^[[2m2026-11-25T22:49:13.904131Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/armsfbcsbzax7pnkim9cqgkx8n747n31-protobuf-34.1' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:13.9057121Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:13.9058272Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:15.4796556Z   ^[[2m2026-11-25T22:49:15.477935Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/qjhlyhshylzcspfxfw21vhsmdvm0k6jx-python3.13-protobuf-7.34.1' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:15.4798262Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:15.4799005Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:17.1186200Z   ^[[2m2026-11-25T22:49:17.117404Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/rsmk7psm9kph06fdjay1g97syi8g6g7c-gtest-1.17.0' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:17.1188889Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:17.1189331Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:18.7513926Z   ^[[2m2026-11-25T22:49:18.750212Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/v1qmqzyvyq91pfgsjx8cpzfrlhnxsw0z-abseil-cpp-20260107.1' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:18.7515965Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:18.7516639Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:20.0917583Z   ^[[2m2026-11-25T22:49:20.090735Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/0wnp6d7lphr6s87qbc8bhr1xkvs4dd1j-python3.13-tensorboard-data-server-0.7.2' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:20.0919708Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:20.0920234Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:21.3502709Z   ^[[2m2026-11-25T22:49:21.349262Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/d9jbrr4ab7hfx2d4qz2fqv83ybs0w253-python3.13-standard-imghdr-3.13.0' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:21.3504951Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:21.3505503Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:22.7279271Z   ^[[2m2026-11-25T22:49:22.726875Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/m2b0s5h6wi0yrjyxdz2bnbjkv5ldahry-python3.13-sortedcontainers-2.4.0' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:22.7281863Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:22.7282247Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:24.0563836Z   ^[[2m2026-11-25T22:49:24.055330Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/ygn7pmns1y10ikvn6f0mgz70i0ahsk7f-python3.13-types-dataclasses-0.6.6' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:24.0565472Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:24.0565818Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:25.5168891Z   ^[[2m2026-11-25T22:49:25.515650Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/kqdr0pijf558v8p6bm0i246jnhhh4ckq-python3.13-typing-extensions-4.15.0' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:25.5171483Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:25.5172037Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:27.1229707Z   ^[[2m2026-11-25T22:49:27.121792Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/hd9vsw1ajhl9031aq4chw08zfjamv754-python3.13-urllib3-2.6.3' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:27.1232047Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:27.1232379Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:28.3607252Z   ^[[2m2026-11-25T22:49:28.359690Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/0hjbb0k3zn1y8fqm5sn0zfr2h5874qg1-libxdmcp-1.1.5' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:28.3609231Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:28.3610083Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:29.6314812Z   ^[[2m2026-11-25T22:49:29.629495Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/0nrv9x54jzw1pyqz8kd53a6zckhc1zhn-libxau-1.0.12' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:29.6316316Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:29.6317248Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:31.5972056Z   ^[[2m2026-11-25T22:49:31.596228Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/1pisgmvq4cgcrhfa3ynn5i712jm1ifil-libaom-3.12.1' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:31.5974079Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:31.5974896Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:33.2413583Z   ^[[2m2026-11-25T22:49:33.240420Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/40kvg6g8ww9k9d116fiv7r9kwxhg4n7s-libwebp-1.6.0' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:33.2415538Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:33.2416792Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:35.0981237Z   ^[[2m2026-11-25T22:49:35.096888Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/456fxgcc00kjlzmikjx55ahp8nng55rs-libimagequant-4.4.1' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:35.0983379Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:35.0983910Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:36.7617803Z   ^[[2m2026-11-25T22:49:36.760742Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/5b5819wf841id5xnz5qi6p6hsil05y7s-dav1d-1.5.3' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:36.7619879Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:36.7620559Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:38.3831515Z   ^[[2m2026-11-25T22:49:38.381572Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/5d5gq4hcclz3mwikka3ykh924p610bdr-gdk-pixbuf-2.44.6' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:38.3833483Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:38.3834044Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:39.8380699Z   ^[[2m2026-11-25T22:49:39.836887Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/5fn8yh764qsrd3hq7zfsy1y1qdifwj79-graphite2-1.3.14' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:39.8382814Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:39.8383369Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:41.3488973Z   ^[[2m2026-11-25T22:49:41.347135Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/6lfzc2r9ifczrfanhzw8knf3zg4f2mix-libselinux-3.10' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:41.3490886Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:41.3491456Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:43.1429840Z   ^[[2m2026-11-25T22:49:43.141971Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/994wwib8zablg0x797i28zsv0ya890h1-python3.13-pillow-12.2.0' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:43.1432259Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:43.1432840Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:44.7188241Z   ^[[2m2026-11-25T22:49:44.717928Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/a9n3345hndg2z6iwbi7m59gvkwcd264j-freetype-2.14.2' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:44.7190767Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:44.7191351Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:46.4064291Z   ^[[2m2026-11-25T22:49:46.405306Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/bck1xkk9m0f60352gnjb512ix0n4x9qm-libxml2-2.15.2' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:46.4066838Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:46.4067961Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:48.2005026Z   ^[[2m2026-11-25T22:49:48.199429Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/bd9nkv00cbnj19zc61rlqyrjvnlmq73j-harfbuzz-13.2.1' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:48.2007220Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:48.2008226Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:50.4395284Z   ^[[2m2026-11-25T22:49:50.438617Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/gd74vdpqzq0qmmikvmrf3r3kghhhnf50-zstd-1.5.7' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:50.4397426Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:50.4398657Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:51.8551176Z   ^[[2m2026-11-25T22:49:51.854067Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/ifng2dpzr1xi45w2px709xzq6fhfqlj3-giflib-5.2.2' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:51.8553580Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:51.8554140Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:53.4448814Z   ^[[2m2026-11-25T22:49:53.443879Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/ixgz746lafcas39mpysz9fq49i6v8syd-libyuv-1908' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:53.4451007Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:53.4451513Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:55.0504680Z   ^[[2m2026-11-25T22:49:55.049187Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/j5pf7byjv0ahvxcnkd5jsw481i82d7ng-libjpeg-turbo-3.1.4' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:55.0507165Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:55.0507491Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:56.5975243Z   ^[[2m2026-11-25T22:49:56.596349Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/jj27mc075js673vkgd8fy6xxr34n8n9i-libxcb-1.17.0' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:56.5976993Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:56.5977867Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:58.1171072Z   ^[[2m2026-11-25T22:49:58.116111Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/jjp9vc7vfrflxnliwkwblzadnyyw2zj2-libtiff-4.7.1' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:58.1173475Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:49:58.1174429Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:00.1754498Z   ^[[2m2026-11-25T22:50:00.174155Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/jlyahda14aya375lv7k9fsin2zk90nxz-glib-2.88.1' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:00.1756749Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:00.1757372Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:01.8267302Z   ^[[2m2026-11-25T22:50:01.825678Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/k1shjmzyzw8bf7vp8gyrqn4dn70xpdxx-brotli-1.2.0-lib' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:01.8270100Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:01.8270524Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:03.5094385Z   ^[[2m2026-11-25T22:50:03.508331Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/k5vzpmslg2aqrqa93cxigbmii560fliq-libwebp-1.6.0' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:03.5096580Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:03.5097069Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:04.9931722Z   ^[[2m2026-11-25T22:50:04.991857Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/md7n8n5l55lpw8izhv4792cjn2isdi3y-lcms2-2.18' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:04.9933436Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:04.9933821Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:06.5965348Z   ^[[2m2026-11-25T22:50:06.595122Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/n25h7sb6dd4q68fk4b8sn92dd3ws4563-libavif-1.4.1' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:06.5967463Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:06.5967816Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:08.1505369Z   ^[[2m2026-11-25T22:50:08.149589Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/n2qf6xg33jak5cfykmw1lx3z823hnkas-lerc-4.1.0' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:08.1507481Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:08.1508058Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:09.7748395Z   ^[[2m2026-11-25T22:50:09.773817Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/nvickifc1d6r6kq20f8nq55fms54hz5w-libvmaf-3.0.0' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:09.7751561Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:09.7752391Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:11.1896758Z   ^[[2m2026-11-25T22:50:11.188616Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/qdnz4adgz6p65pfxaw3w3q6zx3hbaa3x-libdeflate-1.25' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:11.1899754Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:11.1900567Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:12.5640649Z   ^[[2m2026-11-25T22:50:12.562939Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/srn27ymz85mv7nbwkv1lyhi7g91cvyh7-fribidi-1.0.16' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:12.5642983Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:12.5643905Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:14.1935330Z   ^[[2m2026-11-25T22:50:14.192578Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/viv5274f8mkvkg9df7karvl4ffwp0xkb-openjpeg-2.5.4' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:14.1937276Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:14.1938350Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:15.6358344Z   ^[[2m2026-11-25T22:50:15.634797Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/vqyqaaar0dvcdbmzsap60r96n1va0idd-libpng-apng-1.6.56' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:15.6360586Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:15.6361256Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:17.0579143Z   ^[[2m2026-11-25T22:50:17.056301Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/xn70pn0qd5jhdvp5rikgn1yl9bbmyxiq-zlib-1.3.2-static' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:17.0582098Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:17.0582667Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:18.4026251Z   ^[[2m2026-11-25T22:50:18.401576Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/yhqv8xk34fq7b4d4y7rh6inw4l8yhp7k-libraqm-0.10.5' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:18.4027922Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:18.4028411Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:19.8228023Z   ^[[2m2026-11-25T22:50:19.821678Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/5j4am4m6idfk29p9sbmwvr3kr8wxxl80-python3.13-wheel-0.46.1' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:19.8231718Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:19.8232167Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:21.5629068Z   ^[[2m2026-11-25T22:50:21.561590Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/ansrwva02lf81zsaq9kpkvy3f5kacgqz-python3.13-mpmath-1.4.1' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:21.5631694Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:21.5632094Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:22.8171255Z   ^[[2m2026-11-25T22:50:22.815919Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/ap3x6426spqjd7lfakfyy9v5znzhzk1p-python3.13-grpcio-1.80.0-dev' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:22.8173855Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:22.8174411Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:24.2583492Z   ^[[2m2026-11-25T22:50:24.257192Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/rks4c012hxa7z01sfc7w4p7mn74zfp2x-python3.13-requests-2.33.1' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:24.2585855Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:24.2586204Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:25.8343208Z   ^[[2m2026-11-25T22:50:25.833324Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/69qnac9r0lp6nqlxyy7p1h06pxz1mmpd-python3.13-werkzeug-3.1.6' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:25.8345932Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:25.8346791Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:27.1592247Z   ^[[2m2026-11-25T22:50:27.158084Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/klkhmsknrmnpqs7j8wzbhyq80g2yfwy8-python3.13-astunparse-1.6.3' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:27.1594045Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:27.1594445Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:29.0723848Z   ^[[2m2026-11-25T22:50:29.071275Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/js9am9k26yhv887r63ka93d8xaxk0if3-python3.13-pybind11-3.0.4' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:29.0727447Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:29.0728057Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:30.3886394Z   ^[[2m2026-11-25T22:50:30.387569Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/xglji60s6kjbgzypj446yldrbjrgh53r-pybind11-setup-hook' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:30.3888413Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:30.3889328Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:32.1653929Z   ^[[2m2026-11-25T22:50:32.164225Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/vxir2djb4zn6z1s221bpcpw72q4aj66w-python3.13-hypothesis-6.151.10' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:32.1655887Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:32.1656304Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:34.0973671Z   ^[[2m2026-11-25T22:50:34.096360Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/25rr86lli13limp2np2xfqhq0x8lwjgv-python3.13-setuptools-80.10.1' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:34.0975808Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:34.0977062Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:36.1547535Z   ^[[2m2026-11-25T22:50:36.153679Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/l1p5h92m7vwhqif45xq2hww0cjqcw6my-python3.13-networkx-3.6.1' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:36.1550228Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:36.1550773Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:37.4089806Z   ^[[2m2026-11-25T22:50:37.407890Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/4475dvkkvpds695bmfz836x4nic1xz8j-blas-3-dev' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:37.4091667Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:37.4092061Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:38.9288421Z   ^[[2m2026-11-25T22:50:38.927884Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/6jn2ikrwa12m9k14gw5jqbhqarwhnkpl-lapack-3-dev' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:38.9290775Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:38.9291929Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:41.4289369Z   ^[[2m2026-11-25T22:50:41.427874Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/ba0pync7rmzsq32xxaz9l9hs3zj7hil4-blas-3' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:41.4297827Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:41.4298553Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:42.8381299Z   ^[[2m2026-11-25T22:50:42.836936Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/ciq3zg1lwjac9lsim9grz542lyry65vc-gfortran-15.2.0-libgcc' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:42.8384181Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:42.8384821Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:45.2830060Z   ^[[2m2026-11-25T22:50:45.282023Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/l59n6vzkswz23y6s4pr6cmv2p4dpd5f0-python3.13-numpy-2.4.4' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:45.2832079Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:45.2832549Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:47.7023377Z   ^[[2m2026-11-25T22:50:47.701244Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/nmzb24chkjhj581y4dd6006lw7yvwwrh-lapack-3' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:47.7027399Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:47.7028032Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:49.7237259Z   ^[[2m2026-11-25T22:50:49.722214Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/sip20973p37114yis96sba5f4pzl7s3i-gfortran-15.2.0-lib' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:49.7239003Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:49.7239465Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:51.7823731Z   ^[[2m2026-11-25T22:50:51.781220Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/v125s7ad2ni0r1vxw6bp3x0hg0rd403x-openblas-0.3.32' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:51.7826124Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:51.7827405Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:53.7558143Z   ^[[2m2026-11-25T22:50:53.754741Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/nhhncg5q5yzqjp66f8vax70r89zvd2jb-python3.13-tensorboard-2.20.0' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:53.7561493Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:53.7561962Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:55.2036469Z   ^[[2m2026-11-25T22:50:55.202583Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/0j6jil4xc4ndp0kcqzjwbfywxvifl160-libmpc-1.4.0' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:55.2038671Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:55.2039278Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:56.8854139Z   ^[[2m2026-11-25T22:50:56.884326Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/15h9askp4k1lx44d9871wid23j2a8ijp-glibc-2.42-61-dev' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:56.8856407Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:56.8857305Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:58.6020321Z   ^[[2m2026-11-25T22:50:58.601079Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/17rqw7p3j0vvvwja05l6bq2im8qpxcl7-isl-0.20' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:58.6022663Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:58.6023922Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:59.8696933Z   ^[[2m2026-11-25T22:50:59.868387Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/5y1v5mjsrlz3i2pwg43hdc6ghjjylbpq-die-hook' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:59.8698429Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:50:59.8698851Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:01.5039433Z   ^[[2m2026-11-25T22:51:01.502240Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/6h5x436gsbc92ahp2bmxfl8h7h318p17-binutils-2.46-lib' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:01.5041758Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:01.5042208Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:02.7845327Z   ^[[2m2026-11-25T22:51:02.783173Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/788mx070y81zjlg5ipcl0cra3afviw9k-gcc-wrapper-15.2.0' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:02.7849957Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:02.7850370Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:04.3955907Z   ^[[2m2026-11-25T22:51:04.394269Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/bsh7n2nx8ndmm1mmww6v2h4851nalj13-glibc-2.42-61-bin' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:04.3958169Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:04.3958796Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:05.9657860Z   ^[[2m2026-11-25T22:51:05.964797Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/drmzcl1j9wwwgz4q87dvz2p2zfwnp4w3-mpfr-4.2.2' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:05.9659969Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:05.9660976Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:07.2206751Z   ^[[2m2026-11-25T22:51:07.219721Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/hi0fdcqdkmzwxhzlx7y6z2yf6d5lw8ix-expand-response-params' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:07.2209063Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:07.2210138Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:08.5050665Z   ^[[2m2026-11-25T22:51:08.503564Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/mbyy19mdwnfvfwmdi0gqgggx0njvpl1w-binutils-wrapper-2.46' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:08.5052541Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:08.5053149Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:14.9861275Z   ^[[2m2026-11-25T22:51:14.984619Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/qxaq7jz61a6zkr2mq49i0zvqip2m2jj8-gcc-15.2.0' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:14.9864720Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:14.9866251Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:16.4781028Z   ^[[2m2026-11-25T22:51:16.477075Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/r50gpjb5pcl01c7nvhrn31rnwsnhzplg-gmp-6.3.0' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:16.4783038Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:16.4783991Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:18.6674696Z   ^[[2m2026-11-25T22:51:18.666358Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/s2946bl9ciwzhafd66jhansrmxq9xhqm-binutils-2.46' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:18.6676168Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:18.6676515Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:20.5504769Z   ^[[2m2026-11-25T22:51:20.549563Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/s52vdyj97g3adv6qb431v8m2kccs0bzz-linux-headers-6.18.7' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:20.5506546Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:20.5507010Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:21.7833419Z   ^[[2m2026-11-25T22:51:21.782124Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/scadi7kx5gq7yvy8kkgxsflypfbycblb-make-binary-wrapper-hook' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:21.7835227Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:21.7835912Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:24.5472746Z   ^[[2m2026-11-25T22:51:24.546127Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/dz5xars1w3pi7xagc79ggnv340mbbqng-python3.13-sympy-1.14.0' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:24.5475043Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:24.5475928Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:29.3028070Z   ^[[2m2026-11-25T22:51:29.301815Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/vdaxrah89n642jn4vd0a9jp9ck30xqan-python3.13-triton-3.6.0' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:29.3030427Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:29.3031181Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:35.3136894Z   ^[[2m2026-11-25T22:51:35.312655Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/armlmpg50zxhvzhd5kd893vg8839jqfq-python3.13-torch-2.11.0-lib' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:35.3138547Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:35.3138932Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:40.7877226Z   ^[[2m2026-11-25T22:51:40.786674Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/rpbm327sm6nwik6v9gd81mf8y1qz41q3-python3.13-torch-2.11.0' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:40.7880444Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:40.7881821Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:42.2703886Z   ^[[2m2026-11-25T22:51:42.269333Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/wjfhh11sfcdf97mvg7hbxickybxzk850-numactl-2.0.18' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:42.2705743Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:42.2706612Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:43.8943996Z   ^[[2m2026-11-25T22:51:43.893455Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/zyrxhd7nwmkcs11m144jagxcmddw2i41-openssl-3.6.2-bin' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:43.8945546Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:43.8945927Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:46.1997368Z   ^[[2m2026-11-25T22:51:46.198716Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/xr8i7smgy8jg8jmkalvssqfddcppd6qx-python3.13-torch-2.11.0-dev' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:46.1999181Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:46.1999809Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:47.8278949Z   ^[[2m2026-11-25T22:51:47.826734Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/002784hlqqxjqfw6fmr55w6b1y5k33yl-libssh-0.12.0' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:47.8281002Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:47.8282068Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:49.5228133Z   ^[[2m2026-11-25T22:51:49.521747Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/05pzsrj4dmxlfwf8z70hp5vfgvfvfa54-systemd-minimal-libs-260.1' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:49.5230899Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:49.5231392Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:51.0205892Z   ^[[2m2026-11-25T22:51:51.019578Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/19ird1a31plmgjhppsqww9xs8z4wzlqr-libva-2.23.0' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:51.0207714Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:51.0209929Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:52.7561624Z   ^[[2m2026-11-25T22:51:52.755075Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/1n64d2v17vqap62nyg7lbacrj0aj395d-libsamplerate-0.2.2' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:52.7563553Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:52.7563996Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:54.3364041Z   ^[[2m2026-11-25T22:51:54.335402Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/1x7jd3s747a24p4fsywfldb629plxacq-libevent-2.1.12' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:54.3365730Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:54.3366188Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:55.7704922Z   ^[[2m2026-11-25T22:51:55.769520Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/3669nnxilz1y16ifi9nzdkyljhcihx2p-ocl-icd-2.3.4' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:55.7706813Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:55.7707201Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:57.7105577Z   ^[[2m2026-11-25T22:51:57.709424Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/3q4wwqny99xr196bg2j5s2mn0pkrg5vi-svt-av1-3.1.2' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:57.7107616Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:57.7107930Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:59.3911198Z   ^[[2m2026-11-25T22:51:59.389521Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/3zqm4hxrxarx85cxd03gj5yvxkzialqj-alsa-lib-1.2.15.3' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:59.3912991Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:51:59.3913592Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:00.8861252Z   ^[[2m2026-11-25T22:52:00.885001Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/41b8kcrrjd20gbs1v7bar29arr9wn151-alsa-ucm-conf-1.2.15.3' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:00.8863679Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:00.8864034Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:02.4657356Z   ^[[2m2026-11-25T22:52:02.464810Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/483wixjigga3ikcn57169zpwr30l6qvf-libsndfile-1.2.2' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:02.4659032Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:02.4660268Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:03.9097609Z   ^[[2m2026-11-25T22:52:03.908557Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/48krja1dqwpsa0i3yw9v47hbcxn7agrh-fontconfig-2.17.1-lib' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:03.9100364Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:03.9101064Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:05.6271702Z   ^[[2m2026-11-25T22:52:05.626128Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/7dr4qx9ws30cdh9if3x79pbby3nxakrf-libmpg123-1.33.4' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:05.6273294Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:05.6273937Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:07.4108154Z   ^[[2m2026-11-25T22:52:07.409790Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/7fnjx0b7a7f80055i43v9pwbx25lwh0v-libpulseaudio-17.0' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:07.4111371Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:07.4112081Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:09.1405638Z   ^[[2m2026-11-25T22:52:09.139612Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/7gwd2kvkx1s369cwiv5z4x2xjxbppav6-libx11-1.8.13' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:09.1409454Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:09.1412468Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:10.7493063Z   ^[[2m2026-11-25T22:52:10.748103Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/7lvnra5yii4r4p0cv516fpsjyny6v9lj-zvbi-0.2.44' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:10.7494436Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:10.7494751Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:12.1211411Z   ^[[2m2026-11-25T22:52:12.120142Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/81xib6667nkj5l0hmkis3m211w878l7j-util-linux-minimal-2.42-mount' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:12.1214293Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:12.1223081Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:13.5345028Z   ^[[2m2026-11-25T22:52:13.532923Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/84vyyygz11han4c3wvip3zb30zh2jdzc-util-linux-minimal-2.42-swap' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:13.5347078Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:13.5347500Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:15.0491783Z   ^[[2m2026-11-25T22:52:15.047997Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/8fbsxg75a01nm3ivxg8kl3zxd7wx34p2-libdrm-2.4.133' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:15.0493763Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:15.0494155Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:16.7693286Z   ^[[2m2026-11-25T22:52:16.768375Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/8rmf590yl9v5d29xk8xfs90y82ikc2yy-srt-1.5.4' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:16.7694793Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:16.7695196Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:18.5269753Z   ^[[2m2026-11-25T22:52:18.525976Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/92c7phs98c63hasf8b1sm2g15xlzaqnm-libopenmpt-0.8.6' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:18.5271876Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:18.5272756Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:19.9762240Z   ^[[2m2026-11-25T22:52:19.975196Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/9d3f33x2vk5hhlmidy7mzzpryn14s3ns-libass-0.17.4' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:19.9764441Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:19.9764733Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:21.6167788Z   ^[[2m2026-11-25T22:52:21.615316Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/9qxv3ymy8cikbk007hc8gg76gxvn0agd-mpg123-1.33.4' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:21.6169813Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:21.6170525Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:23.2139269Z   ^[[2m2026-11-25T22:52:23.212852Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/alsxw6b2rdwhmw3rq41d3kbk02km20wh-v4l-utils-1.32.0' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:23.2141055Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:23.2141379Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:24.6741599Z   ^[[2m2026-11-25T22:52:24.673176Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/b05yg75a01zvz9ag9qk1q21b5331fn38-soxr-0.1.3' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:24.6743372Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:24.6743828Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:26.0152125Z   ^[[2m2026-11-25T22:52:26.014073Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/b6raakvsa23phwwhzq0a41bnfbr0z74v-speexdsp-1.2.1' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:26.0153881Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:26.0154419Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:27.4544167Z   ^[[2m2026-11-25T22:52:27.453228Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/b89rbd2k8k3a8va6xkmh4nizgrpwv0y4-wayland-1.25.0' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:27.4545912Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:27.4546251Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:29.3040403Z   ^[[2m2026-11-25T22:52:29.303088Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/bazbfy39njrwsyb79a5mblx2cmal3907-hwdata-0.406' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:29.3042637Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:29.3043131Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:31.0218280Z   ^[[2m2026-11-25T22:52:31.020837Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/bj94qv4isp33qdv9rj61yqd534dzqs80-p11-kit-0.26.2' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:31.0220167Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:31.0220613Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:33.1116853Z   ^[[2m2026-11-25T22:52:33.110785Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/cfjm0s2jnlaiz9y3byvfa0fc6fp2la20-systemd-minimal-260.1' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:33.1118866Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:33.1120123Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:34.4376111Z   ^[[2m2026-11-25T22:52:34.436556Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/ciwvx39m0iiyr98d1rkc4rl3l9y0wfnd-cjson-1.7.19' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:34.4379245Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:34.4380711Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:35.8955280Z   ^[[2m2026-11-25T22:52:35.894545Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/d6vnmfmcz5b299180issiaad4m96wh8k-vulkan-loader-1.4.341.0' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:35.8957273Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:35.8958117Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:37.5567638Z   ^[[2m2026-11-25T22:52:37.555792Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/dpi7sgi4dmnddwjwdi57d8x06sx49vkn-libglvnd-1.7.0' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:37.5569655Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:37.5570279Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:38.8549988Z   ^[[2m2026-11-25T22:52:38.853558Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/f9yj1bxn989y7fdrb4jaxd7kjrm3ajbk-libxfixes-6.0.2' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:38.8551812Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:38.8552245Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:40.3178859Z   ^[[2m2026-11-25T22:52:40.317054Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/g04j1g5niwibk6h6l5j407476was6av6-libjack2-1.9.22' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:40.3181011Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:40.3181452Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:41.6952393Z   ^[[2m2026-11-25T22:52:41.694201Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/g273dhprbasws60m9867jdc5s2az689d-libpciaccess-0.19' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:41.6954234Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:41.6955299Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:43.4965709Z   ^[[2m2026-11-25T22:52:43.495735Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/g2cwwnjsivg7br1i90vlmg5jaz9np2kv-fftw-single-3.3.10' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:43.4967538Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:43.4968828Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:45.3898532Z   ^[[2m2026-11-25T22:52:45.388856Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/gjbj67bwm80bwdfmifzzqi1sc5j0dg5q-libvpx-1.16.0' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:45.3900913Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:45.3901952Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:46.8352497Z   ^[[2m2026-11-25T22:52:46.834079Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/gsi4v2vmizrw84p603lx9mfy1ljcwggh-kmod-31-lib' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:46.8354650Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:46.8355852Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:48.2326795Z   ^[[2m2026-11-25T22:52:48.231640Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/hfnk357mb1n0yyvvz7wdprh7nwsi0vqk-vid.stab-1.1.1-unstable-2025-08-21' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:48.2330595Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:48.2333525Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:49.7160888Z   ^[[2m2026-11-25T22:52:49.715156Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/i6ydjjps5z11kcljpkqnpg9abf536ylv-libbluray-1.4.1' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:49.7162303Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:49.7162614Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:51.1022863Z   ^[[2m2026-11-25T22:52:51.101256Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/i8dcswdbyy337aw266f922lbik0jy8g6-dconf-0.49.0-lib' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:51.1024653Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:51.1025152Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:52.3630395Z   ^[[2m2026-11-25T22:52:52.362124Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/iqr51pwna7daax80l4c1rh3lp7mxlwvm-libvdpau-1.5' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:52.3632067Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:52.3632858Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:53.7612243Z   ^[[2m2026-11-25T22:52:53.760173Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/kawx5fdjxa7r9idd689qxvhc6r580zh1-libtasn1-4.21.0' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:53.7614198Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:53.7614691Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:55.2256466Z   ^[[2m2026-11-25T22:52:55.224682Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/kdrf8f2x3gg7kwa236mj49zsqf97x6c8-openapv-0.2.1.2' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:55.2258590Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:55.2259970Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:56.7457916Z   ^[[2m2026-11-25T22:52:56.744759Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/ksami5im2kz3przdlh55349gsrkl0mfj-lame-3.100-lib' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:56.7460213Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:56.7460732Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:58.0350090Z   ^[[2m2026-11-25T22:52:58.033971Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/kz9nf4vb7pg38411r2aaa634k1p4klvc-libogg-1.3.6' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:58.0352182Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:58.0352684Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:59.4008971Z   ^[[2m2026-11-25T22:52:59.399826Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/l1im0bii1ld332kcgg0gr72k6xla2dq1-libxext-1.3.7' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:59.4011409Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:52:59.4011795Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:01.0293700Z   ^[[2m2026-11-25T22:53:01.028400Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/lxf9hcwwkgf2h0ib5a2yyma1jyjqkp8f-python3.13-torchcodec-0.11.1' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:01.0295563Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:01.0296160Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:02.3864808Z   ^[[2m2026-11-25T22:53:02.385483Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/m3rljmxkdbvg8sm43mnchsnk1j7l57yw-alsa-topology-conf-1.2.5.1' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:02.3866489Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:02.3866937Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:03.8488373Z   ^[[2m2026-11-25T22:53:03.847865Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/mgvggj78cigpkzdspqbh0m17fvaadhak-libtheora-1.2.0' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:03.8490445Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:03.8491014Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:05.3914604Z   ^[[2m2026-11-25T22:53:05.390515Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/mp0glxb79yk04qyafq08kmapp831qc3c-zimg-3.0.6' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:05.3917109Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:05.3917925Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:07.0626144Z   ^[[2m2026-11-25T22:53:07.061613Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/mrvg2vykjhhdlh28bh7h3mqrnmyiajzw-nettle-3.10.2' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:07.0627947Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:07.0628437Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:08.4992034Z   ^[[2m2026-11-25T22:53:08.498276Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/ndadbpc4s7b5j2l9vsm2jw8pzfyn8r0v-dbus-1.16.2-lib' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:08.4994073Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:08.4995031Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:09.8485998Z   ^[[2m2026-11-25T22:53:09.847663Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/pxxjhd9y7z2anp67bp6j4002r9bnwizf-ffmpeg-8.1-data' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:09.8487600Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:09.8488242Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:11.4724123Z   ^[[2m2026-11-25T22:53:11.471258Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/q467fsvyhfjbv2vym2yziarzvrh45k7k-flac-1.5.0' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:11.4725880Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:11.4726362Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:12.9947624Z   ^[[2m2026-11-25T22:53:12.993818Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/q7xxk3bzyhp4b4f3685z0mp8grg3r5l8-libvorbis-1.3.7' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:12.9949274Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:12.9950037Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:14.8048346Z   ^[[2m2026-11-25T22:53:14.803774Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/qhkwr0h5zxmmbnircw05rn7ksp2wnb2w-x264-0-unstable-2025-01-03-lib' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:14.8050438Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:14.8050830Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:16.3083847Z   ^[[2m2026-11-25T22:53:16.307315Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/qwyl8kb0r3bsml0k7hz1zj75i0x9dyxq-libtool-2.5.4-lib' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:16.3085761Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:16.3086286Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:18.0650586Z   ^[[2m2026-11-25T22:53:18.064218Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/r4z9iqiagmr78kzx0vswa5hspi1aq8wn-mbedtls-3.6.6' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:18.0652009Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:18.0652426Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:19.6118209Z   ^[[2m2026-11-25T22:53:19.610789Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/s0v7cizdm8c5d3v1z9467lw33q1ksq44-dejavu-fonts-minimal-2.37' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:19.6120145Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:19.6120471Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:21.1764957Z   ^[[2m2026-11-25T22:53:21.175506Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/s1hjbyg12jj4q3m5drn4i6prgwhr437w-libopus-1.6.1' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:21.1766810Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:21.1773252Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:22.8648062Z   ^[[2m2026-11-25T22:53:22.863787Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/sm8plkabc1ngyazcf4imsxfiafs4lj15-xvidcore-1.3.7' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:22.8650310Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:22.8650631Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:24.2983360Z   ^[[2m2026-11-25T22:53:24.297441Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/vf1h0mcc5xpasmsm771h2ngk9x8nqkn2-librist-0.2.11' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:24.2985151Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:24.2986434Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:25.9842156Z   ^[[2m2026-11-25T22:53:25.983182Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/vg3wx5csgpsix6b76n71nkrlj52q9018-unbound-1.25.0-lib' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:25.9844297Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:25.9844797Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:27.7813167Z   ^[[2m2026-11-25T22:53:27.780364Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/w9xqc6yk8vnvd3xh46x3jkpha8fygbvp-gnutls-3.8.13' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:27.7814953Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:27.7815660Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:29.2394339Z   ^[[2m2026-11-25T22:53:29.238506Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/x62lc9cwndz8yh47l0brgf06vjc4wnxj-speex-1.2.1' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:29.2395879Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:29.2396289Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:31.6668026Z   ^[[2m2026-11-25T22:53:31.665743Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/xvrjmskfrp07gmh1zzlyfkv50nw40dcv-ffmpeg-8.1-lib' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:31.6670690Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:31.6671327Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:33.0397063Z   ^[[2m2026-11-25T22:53:33.038710Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/xwd1hzks7birljbwqd0l25blaa2qz1h7-util-linux-minimal-2.42-login' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:33.0399015Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:33.0399658Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:34.5878606Z   ^[[2m2026-11-25T22:53:34.586850Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/y56aqb1m3y5davn6hsv4jfbml78qw4mv-gmp-with-cxx-6.3.0' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:34.5881114Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:34.5881468Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:36.6556255Z   ^[[2m2026-11-25T22:53:36.654567Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/ypm8qd5nw5y0k97j08pjvcscys92vliq-x265-4.1' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:36.6558449Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:36.6559287Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:37.9762309Z   ^[[2m2026-11-25T22:53:37.975218Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/yyj8jpg9g2382khm5vgb0i20bp8j4phb-dns-root-data-2025-04-14' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:37.9764040Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:37.9764433Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:39.6190745Z   ^[[2m2026-11-25T22:53:39.618131Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/z2z1vyjz3rpa8rgpzssfsn0d8dnl663y-fontconfig-2.17.1' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:39.6193223Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:39.6193720Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:40.9768487Z   ^[[2m2026-11-25T22:53:40.975748Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/zzrv2kz5gv9mch8kwqcbifsz5lmv5rnv-kmod-31' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:40.9772856Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:40.9773284Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:42.3370570Z   ^[[2m2026-11-25T22:53:42.335980Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/nsqb3lid7wd67fa8ivljd71rdd57vcid-python3-3.13.13-env' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:42.3372636Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:42.3373119Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:43.6262940Z   ^[[2m2026-11-25T22:53:43.625258Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/5znwlcyqcgak00yspr71l5m9k07yvmgk-nix-shell-env' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:43.6265114Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:43.6265735Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:45.1359927Z   ^[[2m2026-11-25T22:53:45.134894Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/73fr7zjwc2s46y7vrq8563237l0ivqcb-bash-interactive-5.3p9-man' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:45.1362293Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:45.1362772Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:46.8688376Z   ^[[2m2026-11-25T22:53:46.860786Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::gha^[[0m^[[32m: ^[[32mUploaded '/nix/store/cgjr3kj3hs7ngznyws5qfg16c8scpys0-bash-interactive-5.3p9' to the GitHub Action Cache^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:46.8694505Z     ^[[2;3mat^[[0m magic-nix-cache/src/gha.rs:213
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:46.8696647Z 
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:46.8697752Z   ^[[2m2026-11-25T22:53:46.860994Z^[[0m ^[[32m INFO^[[0m ^[[1;32mmagic_nix_cache::api^[[0m^[[32m: ^[[32mFlakeHub cache is not enabled, not uploading anything to it^[[0m
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:46.8699014Z     ^[[2;3mat^[[0m magic-nix-cache/src/api.rs:110
+nix-gate	Post Run DeterminateSystems/magic-nix-cache-action@main	2026-11-25T22:53:46.8699690Z 
+nix-gate	Post Run DeterminateSystems/nix-installer-action@main	﻿2026-11-25T22:53:47.2355601Z Post job cleanup.
+nix-gate	Post Run DeterminateSystems/nix-installer-action@main	2026-11-25T22:53:47.7771560Z [command]/usr/bin/sudo mkdir -p /var/lib/determinate
+nix-gate	Post Run actions/checkout@v4	﻿2026-11-25T22:53:48.7731891Z Post job cleanup.
+nix-gate	Post Run actions/checkout@v4	2026-11-25T22:53:48.8740056Z [command]/usr/bin/git version
+nix-gate	Post Run actions/checkout@v4	2026-11-25T22:53:48.8797969Z git version 2.56.1
+nix-gate	Post Run actions/checkout@v4	2026-11-25T22:53:48.8863576Z Temporarily overriding HOME='/home/runner/work/_temp/cc0ea5b2-40bc-488c-8caf-a192f1ed4c06' before making global git config changes
+nix-gate	Post Run actions/checkout@v4	2026-11-25T22:53:48.8876409Z Adding repository directory to the temporary git global config as a safe directory
+nix-gate	Post Run actions/checkout@v4	2026-11-25T22:53:48.8877680Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/vllm-ci-poc/vllm-ci-poc
+nix-gate	Post Run actions/checkout@v4	2026-11-25T22:53:48.8967026Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+nix-gate	Post Run actions/checkout@v4	2026-11-25T22:53:48.9041055Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+nix-gate	Post Run actions/checkout@v4	2026-11-25T22:53:48.9466225Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+nix-gate	Post Run actions/checkout@v4	2026-11-25T22:53:48.9529044Z http.https://github.com/.extraheader
+nix-gate	Post Run actions/checkout@v4	2026-11-25T22:53:48.9550472Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+nix-gate	Post Run actions/checkout@v4	2026-11-25T22:53:48.9581961Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+nix-gate	Post Run actions/checkout@v4	2026-11-25T22:53:49.0204845Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+nix-gate	Post Run actions/checkout@v4	2026-11-25T22:53:49.0268208Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+nix-gate	Complete job	﻿2026-11-25T22:53:49.0790459Z Cleaning up orphan processes
+nix-gate	Complete job	2026-11-25T22:53:49.1085603Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
